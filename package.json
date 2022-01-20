@@ -56,5 +56,6 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3"
-  }
+  },
+  "homepage": "https://dev-yakuza-org.github.io/WrestlingStretch"
 }
