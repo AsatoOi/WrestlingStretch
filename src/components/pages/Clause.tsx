@@ -1,0 +1,55 @@
+import { memo, VFC } from "react";
+import { Box, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
+
+import { TopBreadCrumb } from "../atoms/breadCrumb/TopBreadCrumb";
+import { H2_2 } from "../atoms/text/H2_2";
+import { DetailedText } from "../atoms/text/DetailedText";
+import { ClauseElemLeft } from "../molecules/clauseElem/ClauseElemLeft";
+import { ClauseElemRight } from "../molecules/clauseElem/ClauseElemRight";
+import clauseData from "../../data/json/clause.json";
+
+export const Clause: VFC = memo(() => {
+  return (
+    <Box>
+      <TopBreadCrumb
+        childBreadCrumb={
+          <BreadcrumbItem isCurrentPage>
+            <BreadcrumbLink href="/Clause" color="white">
+              #プロスト5ヶ条
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+        }
+        grandChildBreadCrumb={undefined}
+      />
+      <H2_2>#プロスト５ヶ条</H2_2>
+      <DetailedText>
+        #プロストをパートナーとやりたくても、キッカケがないというあなたへ、パートナーに#プロストを仕掛けるきっかけをお伝えします。
+      </DetailedText>
+      <ClauseElemLeft
+        image={clauseData[0].image}
+        title={clauseData[0].title}
+        text={clauseData[0].text}
+      />
+      <ClauseElemRight
+        image={clauseData[1].image}
+        title={clauseData[1].title}
+        text={clauseData[1].text}
+      />
+      <ClauseElemLeft
+        image={clauseData[2].image}
+        title={clauseData[2].title}
+        text={clauseData[2].text}
+      />
+      <ClauseElemRight
+        image={clauseData[3].image}
+        title={clauseData[3].title}
+        text={clauseData[3].text}
+      />
+      <ClauseElemLeft
+        image={clauseData[4].image}
+        title={clauseData[4].title}
+        text={clauseData[4].text}
+      />
+    </Box>
+  );
+});

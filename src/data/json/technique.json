@@ -1,0 +1,54 @@
+[
+  {
+    "title": "ハイジャック・　　　　バックブリーカー",
+    "term": "発明者",
+    "name": "ドン・レオ・ジョナサン",
+    "likes": 100,
+    "path": "/HijackBackBreaker",
+    "position": [1, 3],
+    "radar": [2, 3, 4, 5, 1],
+    "mainImage": "img/technique/noImage.png",
+    "manner1": "img/technique/noImage.png",
+    "manner2": "img/technique/noImage.png",
+    "manner3": "img/technique/noImage.png"
+  },
+  {
+    "title": "ダブルリストロック",
+    "term": "発明者",
+    "name": "ルー・テーズ",
+    "likes": 25,
+    "path": "/DoubleWristlock",
+    "position": [2, 4],
+    "radar": [2, 3, 4, 5, 1],
+    "mainImage": "img/technique/noImage.png",
+    "manner1": "img/technique/noImage.png",
+    "manner2": "img/technique/noImage.png",
+    "manner3": "img/technique/noImage.png"
+  },
+  {
+    "title": "ボストン・クラブ",
+    "term": "発明者",
+    "name": "ジム・ロンドス",
+    "likes": 88,
+    "path": "/BostonClub",
+    "position": [5, 7],
+    "radar": [2, 3, 4, 5, 1],
+    "mainImage": "img/technique/noImage.png",
+    "manner1": "img/technique/noImage.png",
+    "manner2": "img/technique/noImage.png",
+    "manner3": "img/technique/noImage.png"
+  },
+  {
+    "title": "キャメルクラッチ",
+    "term": "主な使用者",
+    "name": "ザ・シーク",
+    "likes": 80,
+    "path": "/CamelClutch",
+    "position": [9, 2],
+    "radar": [2, 3, 4, 5, 1],
+    "mainImage": "img/technique/noImage.png",
+    "manner1": "img/technique/noImage.png",
+    "manner2": "img/technique/noImage.png",
+    "manner3": "img/technique/noImage.png"
+  }
+]
