@@ -1,6 +1,6 @@
 /*eslint-disable react-hooks/exhaustive-deps*/
 import { memo, VFC, useCallback } from "react";
-import { Box, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
+import { Box, BreadcrumbItem, BreadcrumbLink, Link } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
 import { TopBreadCrumb } from "../atoms/breadCrumb/TopBreadCrumb";
@@ -18,7 +18,7 @@ export const Clause: VFC = memo(() => {
       <TopBreadCrumb
         childBreadCrumb={
           <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink onClick={onClickClause} color="white">
+            <BreadcrumbLink as={Link} onClick={onClickClause} color="white">
               #プロスト5ヶ条
             </BreadcrumbLink>
           </BreadcrumbItem>

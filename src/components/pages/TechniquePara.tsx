@@ -10,6 +10,7 @@ import {
   Heading,
   Text,
   useDisclosure,
+  Link,
 } from "@chakra-ui/react";
 import { TriangleUpIcon } from "@chakra-ui/icons";
 
@@ -32,14 +33,14 @@ export const TechniquePara: VFC = memo(() => {
       <TopBreadCrumb
         childBreadCrumb={
           <BreadcrumbItem>
-            <BreadcrumbLink onClick={onClickSearchRoutes} color="white">
+            <BreadcrumbLink as={Link} onClick={onClickSearchRoutes} color="white">
               #プロストをさがす
             </BreadcrumbLink>
           </BreadcrumbItem>
         }
         grandChildBreadCrumb={
           <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink onClick={onClickPart} color="white">
+            <BreadcrumbLink as={Link} onClick={onClickPart} color="white">
               {Part}
             </BreadcrumbLink>
           </BreadcrumbItem>

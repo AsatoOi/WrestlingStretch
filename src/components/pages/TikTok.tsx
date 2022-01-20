@@ -5,6 +5,7 @@ import {
   Heading,
   BreadcrumbItem,
   BreadcrumbLink,
+  Link,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
@@ -32,7 +33,7 @@ export const TikTok: VFC = memo(() => {
         <TopBreadCrumb
           childBreadCrumb={
             <BreadcrumbItem isCurrentPage>
-              <BreadcrumbLink onClick={onClickTikTok} color="white">
+              <BreadcrumbLink as={Link} onClick={onClickTikTok} color="white">
                 みんなの#プロスト
               </BreadcrumbLink>
             </BreadcrumbItem>

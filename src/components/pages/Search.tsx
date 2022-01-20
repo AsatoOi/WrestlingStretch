@@ -6,6 +6,7 @@ import {
   useDisclosure,
   BreadcrumbItem,
   BreadcrumbLink,
+  Link,
 } from "@chakra-ui/react";
 import { useRecoilState } from "recoil";
 
@@ -34,7 +35,11 @@ export const Search: VFC = memo(() => {
       <TopBreadCrumb
         childBreadCrumb={
           <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink onClick={onClickSearchRoutes} color="white">
+            <BreadcrumbLink
+              as={Link}
+              onClick={onClickSearchRoutes}
+              color="white"
+            >
               #プロストをさがす
             </BreadcrumbLink>
           </BreadcrumbItem>

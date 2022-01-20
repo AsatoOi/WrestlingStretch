@@ -9,6 +9,7 @@ import {
   Text,
   Divider,
   Image,
+  Link,
 } from "@chakra-ui/react";
 
 import { TopBreadCrumb } from "../atoms/breadCrumb/TopBreadCrumb";
@@ -25,7 +26,7 @@ export const Expert: VFC = memo(() => {
       <TopBreadCrumb
         childBreadCrumb={
           <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink onClick={onClickExpert} color="white">
+            <BreadcrumbLink as={Link} onClick={onClickExpert} color="white">
               専門家からのコメント
             </BreadcrumbLink>
           </BreadcrumbItem>
