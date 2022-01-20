@@ -1,4 +1,5 @@
-import { memo, VFC } from "react";
+/*eslint-disable react-hooks/exhaustive-deps*/
+import { memo, VFC, useCallback } from "react";
 import {
   Box,
   BreadcrumbItem,
@@ -14,14 +15,17 @@ import { TopBreadCrumb } from "../atoms/breadCrumb/TopBreadCrumb";
 import { H2_2 } from "../atoms/text/H2_2";
 import ProWrestler from "../../data/img/expert/proWrestler.png";
 import Chiropractor from "../../data/img/expert/chiropractor.png";
+import { useNavigate } from "react-router-dom";
 
 export const Expert: VFC = memo(() => {
+  const navigate = useNavigate();
+  const onClickExpert = useCallback(() => navigate("/Expert"), []);
   return (
     <Box>
       <TopBreadCrumb
         childBreadCrumb={
           <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink href="/Expert" color="white">
+            <BreadcrumbLink onClick={onClickExpert} color="white">
               専門家からのコメント
             </BreadcrumbLink>
           </BreadcrumbItem>

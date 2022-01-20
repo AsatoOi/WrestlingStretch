@@ -1,5 +1,7 @@
-import { memo, VFC } from "react";
+/*eslint-disable react-hooks/exhaustive-deps*/
+import { memo, VFC, useCallback } from "react";
 import { Box, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 import { TopBreadCrumb } from "../atoms/breadCrumb/TopBreadCrumb";
 import { H2_2 } from "../atoms/text/H2_2";
@@ -9,12 +11,14 @@ import { ClauseElemRight } from "../molecules/clauseElem/ClauseElemRight";
 import clauseData from "../../data/json/clause.json";
 
 export const Clause: VFC = memo(() => {
+  const navigate = useNavigate();
+  const onClickClause = useCallback(() => navigate("/Clause"), []);
   return (
     <Box>
       <TopBreadCrumb
         childBreadCrumb={
           <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink href="/Clause" color="white">
+            <BreadcrumbLink onClick={onClickClause} color="white">
               #プロスト5ヶ条
             </BreadcrumbLink>
           </BreadcrumbItem>

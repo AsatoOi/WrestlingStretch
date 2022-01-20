@@ -1,7 +1,15 @@
-import { memo, VFC } from "react";
-import { Flex, Box, Heading } from "@chakra-ui/react";
+import { memo, VFC, useCallback } from "react";
+import {
+  Flex,
+  Box,
+  Heading,
+  BreadcrumbItem,
+  BreadcrumbLink,
+} from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 import { H2_2 } from "../atoms/text/H2_2";
+import { TopBreadCrumb } from "../atoms/breadCrumb/TopBreadCrumb";
 import { TikTokFrame } from "../atoms/tiktok/TikTokFrame";
 import { DetailedText } from "../atoms/text/DetailedText";
 import no1 from "../../data/img/tikTok/no.1.png";
@@ -16,9 +24,21 @@ import no9 from "../../data/img/tikTok/no.9.png";
 import no10 from "../../data/img/tikTok/no.10.png";
 
 export const TikTok: VFC = memo(() => {
+  const navigate = useNavigate();
+  const onClickTikTok = useCallback(() => navigate("/TikTok"), []);
   return (
     <>
       <Box color="white">
+        <TopBreadCrumb
+          childBreadCrumb={
+            <BreadcrumbItem isCurrentPage>
+              <BreadcrumbLink onClick={onClickTikTok} color="white">
+                みんなの#プロスト
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+          }
+          grandChildBreadCrumb={undefined}
+        />
         <H2_2>みんなの#プロスト</H2_2>
         <DetailedText>
           TikTokで#プロストで投稿されたみんなの動画を見ることができます。

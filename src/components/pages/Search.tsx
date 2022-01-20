@@ -1,5 +1,5 @@
 /*eslint-disable react-hooks/exhaustive-deps*/
-import { memo, useEffect, VFC } from "react";
+import { memo, useEffect, VFC, useCallback } from "react";
 import {
   Text,
   Box,
@@ -19,8 +19,11 @@ import { PartsDefault } from "../organisms/parts/PartsDefault";
 import { partsState } from "../../store/partsState";
 import { BooleanFalse } from "../../data/Boolean";
 import { PartsSelect } from "../organisms/parts/PartsSelect";
+import { useNavigate } from "react-router-dom";
 
 export const Search: VFC = memo(() => {
+  const navigate = useNavigate();
+  const onClickSearchRoutes = useCallback(() => navigate("/SearchRoutes"), []);
   const { isOpen, onToggle } = useDisclosure();
   const [partsBoolean, setPartsBoolean] = useRecoilState(partsState);
   useEffect(() => {
@@ -31,7 +34,7 @@ export const Search: VFC = memo(() => {
       <TopBreadCrumb
         childBreadCrumb={
           <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink href="/SearchRoutes" color="white">
+            <BreadcrumbLink onClick={onClickSearchRoutes} color="white">
               #プロストをさがす
             </BreadcrumbLink>
           </BreadcrumbItem>

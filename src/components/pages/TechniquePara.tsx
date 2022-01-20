@@ -1,4 +1,4 @@
-import { memo, VFC } from "react";
+import { memo, VFC, useCallback } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 import {
@@ -23,7 +23,8 @@ export const TechniquePara: VFC = memo(() => {
   const { isOpen, onToggle } = useDisclosure();
   const { Part } = useParams();
   const navigate = useNavigate();
-
+  const onClickSearchRoutes = useCallback(() => navigate("/SearchRoutes"), []);
+  const onClickPart = useCallback(() => navigate(`/SearchRoutes/${Part}`), []);
   const onClickBack = () => navigate(-1);
 
   return (
@@ -31,14 +32,14 @@ export const TechniquePara: VFC = memo(() => {
       <TopBreadCrumb
         childBreadCrumb={
           <BreadcrumbItem>
-            <BreadcrumbLink href="/SearchRoutes" color="white">
+            <BreadcrumbLink onClick={onClickSearchRoutes} color="white">
               #プロストをさがす
             </BreadcrumbLink>
           </BreadcrumbItem>
         }
         grandChildBreadCrumb={
           <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink href="/{Part}" color="white">
+            <BreadcrumbLink onClick={onClickPart} color="white">
               {Part}
             </BreadcrumbLink>
           </BreadcrumbItem>

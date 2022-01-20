@@ -1,7 +1,9 @@
-import { memo, VFC } from "react";
+/*eslint-disable react-hooks/exhaustive-deps*/
+import { memo, VFC, useCallback } from "react";
 
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   childBreadCrumb: any;
@@ -10,6 +12,8 @@ type Props = {
 
 export const TopBreadCrumb: VFC<Props> = memo(
   ({ childBreadCrumb, grandChildBreadCrumb }) => {
+    const navigate = useNavigate();
+    const onClickHome = useCallback(() => navigate("/"), []);
     return (
       <Breadcrumb
         spacing="8px"
@@ -18,7 +22,7 @@ export const TopBreadCrumb: VFC<Props> = memo(
         pl={10}
       >
         <BreadcrumbItem>
-          <BreadcrumbLink href="/" color="white">
+          <BreadcrumbLink onClick={onClickHome} color="white">
             トップ
           </BreadcrumbLink>
         </BreadcrumbItem>

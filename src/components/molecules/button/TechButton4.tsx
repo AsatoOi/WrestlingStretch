@@ -14,6 +14,7 @@ type Props = {
 
 export const TechButton4: VFC<Props> = memo(
   ({ techTitle, name, likes, path }) => {
+    console.log(name);
     const navigate = useNavigate();
     const onClickTech = useCallback(() => navigate(`/SearchRoutes${path}`), []);
     return (
