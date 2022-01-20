@@ -18,7 +18,6 @@ type Props = {
   onClickSearchRoutes: () => void;
   onClickClause: () => void;
   onClickTikTok: () => void;
-  onClickSNS: () => void;
   onClickExpert: () => void;
 };
 

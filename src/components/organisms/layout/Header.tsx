@@ -17,7 +17,6 @@ export const Header: VFC = memo(() => {
   const onClickSearchRoutes = useCallback(() => navigate("/SearchRoutes"), []);
   const onClickClause = useCallback(() => navigate("/Clause"), []);
   const onClickTikTok = useCallback(() => navigate("/TikTok"), []);
-  const onClickSNS = useCallback(() => navigate("/SNS"), []);
   const onClickExpert = useCallback(() => navigate("/Expert"), []);
   return (
     <>
@@ -78,7 +77,6 @@ export const Header: VFC = memo(() => {
         onClickSearchRoutes={onClickSearchRoutes}
         onClickClause={onClickClause}
         onClickTikTok={onClickTikTok}
-        onClickSNS={onClickSNS}
         onClickExpert={onClickExpert}
       />
     </>
