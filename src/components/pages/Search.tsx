@@ -12,7 +12,6 @@ import { useRecoilState } from "recoil";
 
 import { TopBreadCrumb } from "../atoms/breadCrumb/TopBreadCrumb";
 import { DetailedText } from "../atoms/text/DetailedText";
-import { H2_2 } from "../atoms/text/H2_2";
 import { AnatomicalModelsMd } from "../organisms/AnatomicalModels/AnatomicalModelsMd";
 import { AnatomicalModelsBase } from "../organisms/AnatomicalModels/AnatomicalModelsBase";
 import { ToggleButton } from "../molecules/button/ToggleButton";
@@ -21,6 +20,8 @@ import { partsState } from "../../store/partsState";
 import { BooleanFalse } from "../../data/Boolean";
 import { PartsSelect } from "../organisms/parts/PartsSelect";
 import { useNavigate } from "react-router-dom";
+import heading1 from "../../data/img/title/heading1.png";
+import { H2_3 } from "../atoms/text/H2_3";
 
 export const Search: VFC = memo(() => {
   const navigate = useNavigate();
@@ -46,7 +47,7 @@ export const Search: VFC = memo(() => {
         }
         grandChildBreadCrumb={undefined}
       />
-      <H2_2>#プロストをさがす</H2_2>
+      <H2_3 image={heading1} imageTitle="#プロストをさがすの図形" />
       <DetailedText>
         人体図形から、ストレッチしたい筋肉を選択すると、その筋肉を伸ばせる#プロストが表示されます。
       </DetailedText>
