@@ -1,20 +1,21 @@
 /*eslint-disable react-hooks/exhaustive-deps*/
 import { memo, useCallback, VFC } from "react";
 
-import { Box, Flex, Text, Heading } from "@chakra-ui/react";
+import { Box, Flex, Text, Heading, Image } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import heart from "../../../data/img/icon/heart.png";
 
 type Props = {
-  techTitle: string | JSX.Element;
+  techTitle: string;
   name: string;
   likes: number;
   path: string;
+  term: string;
+  main: any;
 };
 
 export const TechButton4: VFC<Props> = memo(
-  ({ techTitle, name, likes, path }) => {
-    console.log(name);
+  ({ techTitle, name, likes, path, term, main }) => {
     const navigate = useNavigate();
     const onClickTech = useCallback(() => navigate(`/SearchRoutes${path}`), []);
     return (
@@ -22,7 +23,7 @@ export const TechButton4: VFC<Props> = memo(
         <Flex
           justify="center"
           position="relative"
-          pt={20}
+          pt={6}
           onClick={onClickTech}
         >
           <Flex
@@ -57,7 +58,9 @@ export const TechButton4: VFC<Props> = memo(
               bg="gray.400"
               borderRadius="2xl"
               mx={{ base: 2, md: 3 }}
-            ></Box>
+            >
+              <Image src={main} alt={`${techTitle}のメインビジュアル`} />
+            </Box>
             <Flex
               flexDirection="column"
               justify="space-around"
@@ -75,7 +78,7 @@ export const TechButton4: VFC<Props> = memo(
               </Heading>
               <Flex align="center">
                 <Text as="p" fontSize="0.05rem" fontWeight="bold">
-                  発明者
+                  {term}
                 </Text>
                 <Text as="p" fontSize="0.05rem" ml={2}>
                   {name}

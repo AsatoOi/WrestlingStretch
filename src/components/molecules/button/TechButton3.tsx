@@ -6,19 +6,19 @@ import heart from "../../../data/img/icon/heart.png";
 
 type Props = {
   main: any;
-  title: string | JSX.Element;
-  like: number;
+  techTitle: string;
+  likes: number;
   path: string;
 };
 
-export const TechButton3: VFC<Props> = memo(({ title, path, like, main }) => {
+export const TechButton3: VFC<Props> = memo(({ techTitle, path, likes, main }) => {
   const navigate = useNavigate();
   const onClickDetail = useCallback(
     () => navigate(`/SearchRoutes${path}`),
     [navigate]
   );
   return (
-    <Box pt={10} px={{ base: 2, md: 4 }}>
+    <Box pt={10} px={{ base: 2, md: 4 }} key={techTitle}>
       <Box
         pos="relative"
         h={{ base: 28, md: 40 }}
@@ -34,12 +34,12 @@ export const TechButton3: VFC<Props> = memo(({ title, path, like, main }) => {
         color="white"
         w={{ base: 28, md: 28 }}
       >
-        {title}
+        {techTitle}
       </Heading>
       <Flex justify="flex-start" pl={1}>
         <Box h="5" w="5" bgImage={heart} bgSize="contain"></Box>
         <Text fontSize={{ base: "x-small", md: "xs" }} ml={3} color="white">
-          {like}
+          {likes}
         </Text>
       </Flex>
     </Box>

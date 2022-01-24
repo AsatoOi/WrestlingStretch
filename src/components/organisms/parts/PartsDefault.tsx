@@ -74,11 +74,12 @@ export const PartsDefault: VFC = memo(() => {
           }}
           m="auto"
         >
-          {newData.slice(0, loadIndex).map((tech) => (
+          {newData.slice(3, newData.length).map((tech) => (
             <TechButton3
-              title={tech.title}
+              key={tech.title}
+              techTitle={tech.title}
               path={tech.path}
-              like={tech.likes}
+              likes={tech.likes}
               main={tech.mainImage}
             />
           ))}

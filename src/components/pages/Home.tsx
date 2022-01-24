@@ -121,14 +121,14 @@ export const Home: VFC = memo(() => {
             <br />
             さぁ、カップルで#プロストを始めましょう。
           </Text>
-          <Image
+          {/* <Image
             src={mainImage}
             alt="main image"
             w={{ base: 250, md: 400, lg: 700 }}
             position="absolute"
             left={{ base: "55%", md: "60%" }}
             top={{ base: "-13vh", md: "-20vh" }}
-          />
+          /> */}
         </Box>
         <H2_1>#プロストランキング</H2_1>
         <Stack pb={10}>

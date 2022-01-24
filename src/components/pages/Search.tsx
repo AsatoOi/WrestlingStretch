@@ -1,5 +1,5 @@
 /*eslint-disable react-hooks/exhaustive-deps*/
-import { memo, useEffect, VFC, useCallback } from "react";
+import { memo, VFC, useCallback, useEffect } from "react";
 import {
   Text,
   Box,
