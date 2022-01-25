@@ -13,7 +13,7 @@ type Props = {
   name: string;
   likes: number;
   path: string;
-  mainImage: any;
+  mainImage: string;
 };
 
 export const TechButton1: VFC<Props> = memo(

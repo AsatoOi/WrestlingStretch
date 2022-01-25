@@ -1,6 +1,6 @@
 [
   {
-    "title": "ハイジャック・　　　　バックブリーカー",
+    "title": "ハイジャック・バックブリーカー",
     "term": "発明者",
     "name": "ドン・レオ・ジョナサン",
     "likes": 100,
@@ -50,7 +50,7 @@
     "path": "/CamelClutch",
     "position": [0, 1, 2, 3, 5, 6, 7, 8, 9, 10],
     "radar": [2, 3, 4, 5, 1],
-    "mainImage": "img/technique/noImage.png",
+    "mainImage": "img/technique/tiktokIcon.png",
     "manner1": "img/technique/noImage.png",
     "manner2": "img/technique/noImage.png",
     "manner3": "img/technique/noImage.png"

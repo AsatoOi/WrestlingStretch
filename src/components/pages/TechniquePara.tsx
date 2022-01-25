@@ -1,3 +1,4 @@
+/*eslint-disable react-hooks/exhaustive-deps*/
 import { memo, VFC, useCallback } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
@@ -11,6 +12,7 @@ import {
   Text,
   useDisclosure,
   Link,
+  Image,
 } from "@chakra-ui/react";
 import { TriangleUpIcon } from "@chakra-ui/icons";
 
@@ -19,21 +21,49 @@ import { TechRadar } from "../molecules/radar/TechRadar";
 import { DetailedText } from "../atoms/text/DetailedText";
 import { Manner } from "../molecules/manner/Manner";
 import { HeartButton } from "../atoms/button/HeartButton";
+import technique from "../../data/json/technique.json";
+import hoge from "../../../public/img/technique/tiktokIcon.png";
+
+type Props = {
+  title: string;
+  term: string;
+  name: string;
+  likes: number;
+  recommend: boolean;
+  path: string;
+  position: number[];
+  radar: number[];
+  mainImage: string;
+  manner1: any;
+  manner2: any;
+  manner3: any;
+};
 
 export const TechniquePara: VFC = memo(() => {
   const { isOpen, onToggle } = useDisclosure();
   const { Part } = useParams();
   const navigate = useNavigate();
   const onClickSearchRoutes = useCallback(() => navigate("/SearchRoutes"), []);
-  const onClickPart = useCallback(() => navigate(`/SearchRoutes/${Part}`), []);
+  const onClickPart = useCallback(() => navigate(`/SearchRoutes${Part}`), []);
   const onClickBack = () => navigate(-1);
 
+  const selectTechnique = technique.filter((tech) => tech.path === `/${Part}`);
+  const currentTechnique: Props = selectTechnique[0];
+  console.log(currentTechnique);
   return (
     <Box>
+      <img
+        src={currentTechnique.mainImage}
+        alt={`${currentTechnique.title}のメインイメージ`}
+      />
       <TopBreadCrumb
         childBreadCrumb={
           <BreadcrumbItem>
-            <BreadcrumbLink as={Link} onClick={onClickSearchRoutes} color="white">
+            <BreadcrumbLink
+              as={Link}
+              onClick={onClickSearchRoutes}
+              color="white"
+            >
               #プロストをさがす
             </BreadcrumbLink>
           </BreadcrumbItem>
@@ -41,14 +71,14 @@ export const TechniquePara: VFC = memo(() => {
         grandChildBreadCrumb={
           <BreadcrumbItem isCurrentPage>
             <BreadcrumbLink as={Link} onClick={onClickPart} color="white">
-              {Part}
+              {currentTechnique.title}
             </BreadcrumbLink>
           </BreadcrumbItem>
         }
       />
       <Flex justify="flex-start" px={16}>
         <Heading as="h2" size="2xl" color="white" pt="10">
-          ハイジャック ・バックブリーカー
+          {currentTechnique.title}
         </Heading>
       </Flex>
       <Flex
@@ -63,6 +93,8 @@ export const TechniquePara: VFC = memo(() => {
             h={{ base: "18rem", md: "22rem", lg: "28rem" }}
             w={{ base: "18rem", md: "22rem", lg: "28rem" }}
             bgColor="gray.300"
+            // backgroundImage={currentTechnique.mainImage}
+            // backgroundSize="contain"
             ml={{ base: "none", md: 12 }}
             borderRadius="3xl"
           ></Box>
@@ -75,7 +107,7 @@ export const TechniquePara: VFC = memo(() => {
             color="white"
             pl={{ base: 10, md: 10 }}
           >
-            発明者
+            {currentTechnique.term}
           </Text>
           <Text
             fontSize={{ base: "md", md: "xl" }}
@@ -83,7 +115,7 @@ export const TechniquePara: VFC = memo(() => {
             py={3}
             textAlign="center"
           >
-            ドン・レオ・ジョナサン
+            {currentTechnique.name}
           </Text>
           <Box px={10}>
             <TechRadar />

@@ -15,7 +15,7 @@ export const PrecautionaryStatement: VFC = memo(() => {
     <>
       {isOpen === false ? (
         <ScaleFade in={!isOpen}>
-          <Box w="95%" minH="6vh">
+          <Box w="95%">
             <Flex
               alignItems="center"
               bg="pink.400"
