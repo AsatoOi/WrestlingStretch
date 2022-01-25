@@ -24,21 +24,6 @@ import { HeartButton } from "../atoms/button/HeartButton";
 import technique from "../../data/json/technique.json";
 import hoge from "../../../public/img/technique/tiktokIcon.png";
 
-type Props = {
-  title: string;
-  term: string;
-  name: string;
-  likes: number;
-  recommend: boolean;
-  path: string;
-  position: number[];
-  radar: number[];
-  mainImage: string;
-  manner1: any;
-  manner2: any;
-  manner3: any;
-};
-
 export const TechniquePara: VFC = memo(() => {
   const { isOpen, onToggle } = useDisclosure();
   const { Part } = useParams();
@@ -48,14 +33,10 @@ export const TechniquePara: VFC = memo(() => {
   const onClickBack = () => navigate(-1);
 
   const selectTechnique = technique.filter((tech) => tech.path === `/${Part}`);
-  const currentTechnique: Props = selectTechnique[0];
+  const currentTechnique = selectTechnique[0];
   console.log(currentTechnique);
   return (
     <Box>
-      <img
-        src={currentTechnique.mainImage}
-        alt={`${currentTechnique.title}のメインイメージ`}
-      />
       <TopBreadCrumb
         childBreadCrumb={
           <BreadcrumbItem>
@@ -93,11 +74,14 @@ export const TechniquePara: VFC = memo(() => {
             h={{ base: "18rem", md: "22rem", lg: "28rem" }}
             w={{ base: "18rem", md: "22rem", lg: "28rem" }}
             bgColor="gray.300"
-            // backgroundImage={currentTechnique.mainImage}
-            // backgroundSize="contain"
             ml={{ base: "none", md: 12 }}
-            borderRadius="3xl"
-          ></Box>
+            borderRadius="3rem"
+          >
+            <Image
+              src={`${process.env.PUBLIC_URL}/${currentTechnique.mainImage}`}
+              alt={`${currentTechnique.title}のメインイメージ`}
+            />
+          </Box>
           <HeartButton isOpen={isOpen} onToggle={onToggle} />
         </Box>
         <Box pt={10} px={{ base: 0, md: 10 }}>
@@ -118,7 +102,7 @@ export const TechniquePara: VFC = memo(() => {
             {currentTechnique.name}
           </Text>
           <Box px={10}>
-            <TechRadar />
+            <TechRadar radar={currentTechnique.radar} />
           </Box>
         </Box>
       </Flex>
@@ -139,12 +123,14 @@ export const TechniquePara: VFC = memo(() => {
         w="70%"
         m="auto"
       >
-        <Manner>①　相手と背中同士で向き合います。</Manner>
-        <Manner>
-          ②　互いに腕を広げて、下になる方が上になる方の手を握ります。
+        <Manner image={`${process.env.PUBLIC_URL}/${currentTechnique.manner1}`}>
+          {`①　${currentTechnique.text1}`}
         </Manner>
-        <Manner>
-          ③　その状態で、下になる人が上になる人を背中で持ち上げて、上の人の胸から腕の筋肉を伸ばしてあげます。下になる人の方が体重が重く、周囲に十分なスペースがある場合、下の人がクルクル周ることで、上の人への刺激を高めることができます。
+        <Manner image={`${process.env.PUBLIC_URL}/${currentTechnique.manner2}`}>
+          {`②　${currentTechnique.text2}`}
+        </Manner>
+        <Manner image={`${process.env.PUBLIC_URL}/${currentTechnique.manner2}`}>
+          {`③　${currentTechnique.text3}`}
         </Manner>
       </Flex>
       <Heading
@@ -158,9 +144,7 @@ export const TechniquePara: VFC = memo(() => {
       >
         プロレスラーからのイチコメ
       </Heading>
-      <DetailedText>
-        男女のカップルであれば、下に男子、上に女子がいいでしょう。
-      </DetailedText>
+      <DetailedText>{currentTechnique.comment}</DetailedText>
       <Flex justify="center" pt={10}>
         <Button
           onClick={onClickBack}

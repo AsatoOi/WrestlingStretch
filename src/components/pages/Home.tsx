@@ -76,7 +76,7 @@ export const Home: VFC = memo(() => {
         <Flex flexFlow="column" h="93vh" justify="center">
           <Box flex="1" textAlign="center">
             <Box
-              w={{ base: "22rem", sm: "25rem", md: "35rem", lg: "60rem" }}
+              w={{ base: "22rem", sm: "25rem", md: "35rem", lg: "55rem" }}
               mt="20vh"
               mb={8}
               mx="auto"

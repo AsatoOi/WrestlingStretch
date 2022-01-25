@@ -47,7 +47,7 @@ export const Search: VFC = memo(() => {
         }
         grandChildBreadCrumb={undefined}
       />
-      <H2_3 image={heading1} imageTitle="#プロストをさがすの図形" />
+      <H2_3 image={heading1} imageTitle="#プロストをさがす" />
       <DetailedText>
         人体図形から、ストレッチしたい筋肉を選択すると、その筋肉を伸ばせる#プロストが表示されます。
       </DetailedText>

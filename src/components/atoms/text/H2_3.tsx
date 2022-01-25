@@ -9,10 +9,13 @@ type Props = {
 
 export const H2_3: VFC<Props> = memo(({ image, imageTitle }) => {
   return (
-    <Flex justify="center">
-      <Heading as="h2" size="lg" color="white" pt="10" w="30rem">
-        <Image src={image} alt={imageTitle} />
-      </Heading>
+    <Flex justify="center" as="h2">
+      <Image
+        pt="10"
+        src={image}
+        alt={imageTitle}
+        w={{ base: "15rem", md: "25rem" }}
+      />
     </Flex>
   );
 });

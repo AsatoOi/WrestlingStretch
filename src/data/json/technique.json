@@ -11,7 +11,11 @@
     "mainImage": "img/technique/noImage.png",
     "manner1": "img/technique/noImage.png",
     "manner2": "img/technique/noImage.png",
-    "manner3": "img/technique/noImage.png"
+    "manner3": "img/technique/noImage.png",
+    "text1": "相手と背中同士で向き合います。",
+    "text2": "互いに腕を広げて、下になる方が上になる方の手を握ります。",
+    "text3": "その状態で、下になる人が上になる人を背中で持ち上げて、上の人の胸から腕の筋肉を伸ばしてあげます。下になる人の方が体重が重く、周囲に十分なスペースがある場合、下の人がクルクル周ることで、上の人への刺激を高めることができます。",
+    "comment": "男女のカップルであれば、下に男子、上に女子がいいでしょう。"
   },
   {
     "title": "ダブルリストロック",
@@ -21,11 +25,15 @@
     "recommend": false,
     "path": "/DoubleWristlock",
     "position": [0, 2, 4],
-    "radar": [2, 3, 4, 5, 1],
+    "radar": [5, 3, 4, 5, 5],
     "mainImage": "img/technique/noImage.png",
     "manner1": "img/technique/noImage.png",
     "manner2": "img/technique/noImage.png",
-    "manner3": "img/technique/noImage.png"
+    "manner3": "img/technique/noImage.png",
+    "text1": "あああああああああ",
+    "text2": "互いに腕を広げて、下になる方が上になる方の手を握ります。",
+    "text3": "その状態で、下になる人が上になる人を背中で持ち上げて、上の人の胸から腕の筋肉を伸ばしてあげます。下になる人の方が体重が重く、周囲に十分なスペースがある場合、下の人がクルクル周ることで、上の人への刺激を高めることができます。",
+    "comment": "男女のカップルであれば、下に男子、上に女子がいいでしょう。"
   },
   {
     "title": "ボストン・クラブ",
@@ -35,11 +43,15 @@
     "recommend": false,
     "path": "/BostonClub",
     "position": [0, 5, 7],
-    "radar": [2, 3, 4, 5, 1],
+    "radar": [2, 2, 3, 4, 1],
     "mainImage": "img/technique/noImage.png",
     "manner1": "img/technique/noImage.png",
     "manner2": "img/technique/noImage.png",
-    "manner3": "img/technique/noImage.png"
+    "manner3": "img/technique/noImage.png",
+    "text1": "いいいいいいいいいいい",
+    "text2": "互いに腕を広げて、下になる方が上になる方の手を握ります。",
+    "text3": "その状態で、下になる人が上になる人を背中で持ち上げて、上の人の胸から腕の筋肉を伸ばしてあげます。下になる人の方が体重が重く、周囲に十分なスペースがある場合、下の人がクルクル周ることで、上の人への刺激を高めることができます。",
+    "comment": "男女のカップルであれば、下に男子、上に女子がいいでしょう。"
   },
   {
     "title": "キャメルクラッチ",
@@ -49,10 +61,14 @@
     "recommend": true,
     "path": "/CamelClutch",
     "position": [0, 1, 2, 3, 5, 6, 7, 8, 9, 10],
-    "radar": [2, 3, 4, 5, 1],
-    "mainImage": "img/technique/tiktokIcon.png",
+    "radar": [4, 4, 4, 5, 1],
+    "mainImage": "img/technique/noImage.png",
     "manner1": "img/technique/noImage.png",
     "manner2": "img/technique/noImage.png",
-    "manner3": "img/technique/noImage.png"
+    "manner3": "img/technique/noImage.png",
+    "text1": "うううううううううううう",
+    "text2": "互いに腕を広げて、下になる方が上になる方の手を握ります。",
+    "text3": "その状態で、下になる人が上になる人を背中で持ち上げて、上の人の胸から腕の筋肉を伸ばしてあげます。下になる人の方が体重が重く、周囲に十分なスペースがある場合、下の人がクルクル周ることで、上の人への刺激を高めることができます。",
+    "comment": "男女のカップルであれば、下に男子、上に女子がいいでしょう。"
   }
 ]
