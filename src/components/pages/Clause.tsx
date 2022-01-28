@@ -20,13 +20,13 @@ export const Clause: VFC = memo(() => {
         childBreadCrumb={
           <BreadcrumbItem isCurrentPage>
             <BreadcrumbLink as={Link} onClick={onClickClause} color="white">
-              #プロスト5ヶ条
+              #プロスト４ヶ条
             </BreadcrumbLink>
           </BreadcrumbItem>
         }
         grandChildBreadCrumb={undefined}
       />
-      <H2_2 image={heading4} imageTitle="#プロスト５ヶ条" />
+      <H2_2 image={heading4} imageTitle="#プロスト４ヶ条" />
       <DetailedText>
         #プロストをパートナーとやりたくても、キッカケがないというあなたへ、パートナーに#プロストを仕掛けるきっかけをお伝えします。
       </DetailedText>
@@ -49,11 +49,6 @@ export const Clause: VFC = memo(() => {
         image={clauseData[3].image}
         title={clauseData[3].title}
         text={clauseData[3].text}
-      />
-      <ClauseElemLeft
-        image={clauseData[4].image}
-        title={clauseData[4].title}
-        text={clauseData[4].text}
       />
     </Box>
   );

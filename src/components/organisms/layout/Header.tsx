@@ -19,7 +19,7 @@ export const Header: VFC = memo(() => {
   const onClickTikTok = useCallback(() => navigate("/TikTok"), []);
   const onClickExpert = useCallback(() => navigate("/Expert"), []);
   return (
-    <>
+    <Box position="fixed" width="100%" zIndex="10000">
       <Flex
         as="nav"
         bg="#5482F6"
@@ -52,7 +52,7 @@ export const Header: VFC = memo(() => {
           </Box>
           <Box pr={20}>
             <Link onClick={onClickClause} fontWeight="bold">
-              #プロスト５ヶ条
+              #プロスト４ヶ条
             </Link>
           </Box>
           <Box pr={20}>
@@ -79,6 +79,6 @@ export const Header: VFC = memo(() => {
         onClickTikTok={onClickTikTok}
         onClickExpert={onClickExpert}
       />
-    </>
+    </Box>
   );
 });

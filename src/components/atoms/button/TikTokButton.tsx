@@ -5,7 +5,7 @@ import TiktokIcon from "../../../data/img/icon/tiktokIcon.png";
 
 export const TikTokButton: VFC = memo(() => {
   return (
-    <Link href="https://www.tiktok.com/">
+    <Link href="https://vt.tiktok.com/ZSeb6Wo69">
       <Image
         boxSize={7}
         fit="contain"

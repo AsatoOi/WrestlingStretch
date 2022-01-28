@@ -13,7 +13,7 @@ export const ClauseElemLeft: VFC<Props> = memo(({ title, text, image }) => {
   return (
     <Flex justify={{ base: "center", md: "flex-start" }}>
       <Flex
-        w={{ base: "24rem", md: "45rem" }}
+        w={{ base: "24rem", md: "45rem", lg: "60rem" }}
         display={{ base: "grid", md: "flex" }}
         ml={{ base: "none", md: "10%", lg: "20%" }}
         justify={{ base: "center", md: "flex-start" }}
@@ -22,11 +22,11 @@ export const ClauseElemLeft: VFC<Props> = memo(({ title, text, image }) => {
         <Image
           src={image}
           alt="#プロスト５ヶ条のイメージ"
-          h={{ base: 44, md: 72 }}
-          w={{ base: 44, md: 72 }}
+          h={{ base: 44, md: 72, lg: 96 }}
+          w={{ base: 44, md: 72, lg: 96 }}
           margin="auto"
         />
-        <Box w={{ base: "100%", md: "57%" }} m="auto">
+        <Box w={{ base: "100%", md: "60%" }} m="auto">
           <Heading
             as="h3"
             fontSize={{ base: "lg", md: "xl" }}

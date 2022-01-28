@@ -7,7 +7,7 @@ import {
   DrawerOverlay,
   Flex,
   Link,
-  Box
+  Box,
 } from "@chakra-ui/react";
 
 import { TikTokButton } from "../../atoms/button/TikTokButton";
@@ -28,13 +28,13 @@ export const MenuDrawer: VFC<Props> = memo(
     onClickSearchRoutes,
     onClickClause,
     onClickTikTok,
-    onClickExpert
+    onClickExpert,
   }) => {
     const LinkAll: object[] = [
       { name: "#プロストをさがす", path: onClickSearchRoutes },
-      { name: "#プロスト５ヶ条", path: onClickClause },
+      { name: "#プロスト４ヶ条", path: onClickClause },
       { name: "みんなの#プロスト", path: onClickTikTok },
-      { name: "専門家からのコメント", path: onClickExpert }
+      { name: "専門家からのコメント", path: onClickExpert },
     ];
 
     return (

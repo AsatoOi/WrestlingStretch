@@ -22,7 +22,7 @@ export const Expert: VFC = memo(() => {
   const navigate = useNavigate();
   const onClickExpert = useCallback(() => navigate("/Expert"), []);
   return (
-    <Box>
+    <Box w="100%" h="100vh">
       <TopBreadCrumb
         childBreadCrumb={
           <BreadcrumbItem isCurrentPage>
@@ -34,7 +34,7 @@ export const Expert: VFC = memo(() => {
         grandChildBreadCrumb={undefined}
       />
       <H2_2 image={heading7} imageTitle="専門家からのコメント" />
-      <Flex justify="center">
+      <Flex justify="center" width="100%">
         <Flex
           w={{ base: "24rem", md: "45rem" }}
           display={{ base: "grid", md: "flex" }}
