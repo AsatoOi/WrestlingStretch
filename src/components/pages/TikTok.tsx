@@ -1,8 +1,8 @@
+/*eslint-disable react-hooks/exhaustive-deps*/
 import { memo, VFC, useCallback } from "react";
 import {
   Flex,
   Box,
-  Heading,
   BreadcrumbItem,
   BreadcrumbLink,
   Link,
@@ -10,9 +10,12 @@ import {
 import { useNavigate } from "react-router-dom";
 
 import { H2_2 } from "../atoms/text/H2_2";
+import { H2_1 } from "../atoms/text/H2_1";
 import { TopBreadCrumb } from "../atoms/breadCrumb/TopBreadCrumb";
 import { TikTokFrame } from "../atoms/tiktok/TikTokFrame";
 import { DetailedText } from "../atoms/text/DetailedText";
+import heading5 from "../../data/img/title/heading5.png";
+import heading6 from "../../data/img/title/heading6.png";
 import no1 from "../../data/img/tikTok/no.1.png";
 import no2 from "../../data/img/tikTok/no.2.png";
 import no3 from "../../data/img/tikTok/no.3.png";
@@ -40,7 +43,7 @@ export const TikTok: VFC = memo(() => {
           }
           grandChildBreadCrumb={undefined}
         />
-        <H2_2>みんなの#プロスト</H2_2>
+        <H2_2 image={heading5} imageTitle="みんなの##プロスト" />
         <DetailedText>
           TikTokで#プロストで投稿されたみんなの動画を見ることができます。
           あなたも投稿をして、#プロストコミュニティーを広げましょう。
@@ -57,17 +60,7 @@ export const TikTok: VFC = memo(() => {
             <TikTokFrame elm={no8} />
           </Flex>
         </Flex>
-        <Flex justify="center">
-          <Heading
-            as="h2"
-            size="lg"
-            color="white"
-            pt={{ base: 32, md: 40 }}
-            pb={{ base: 10, md: 10 }}
-          >
-            #プロスト公式TikTok
-          </Heading>
-        </Flex>
+        <H2_1 image={heading6} imageTitle="#プロスト公式TikTok" />
         <Flex justify="center">
           <Flex flexWrap="wrap" w={{ base: "20rem", md: "48rem" }} m="auto">
             <TikTokFrame elm={no9} />

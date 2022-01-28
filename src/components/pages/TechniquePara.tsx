@@ -22,7 +22,6 @@ import { DetailedText } from "../atoms/text/DetailedText";
 import { Manner } from "../molecules/manner/Manner";
 import { HeartButton } from "../atoms/button/HeartButton";
 import technique from "../../data/json/technique.json";
-import hoge from "../../../public/img/technique/tiktokIcon.png";
 
 export const TechniquePara: VFC = memo(() => {
   const { isOpen, onToggle } = useDisclosure();
@@ -73,9 +72,7 @@ export const TechniquePara: VFC = memo(() => {
           <Box
             h={{ base: "18rem", md: "22rem", lg: "28rem" }}
             w={{ base: "18rem", md: "22rem", lg: "28rem" }}
-            bgColor="gray.300"
             ml={{ base: "none", md: 12 }}
-            borderRadius="3rem"
           >
             <Image
               src={`${process.env.PUBLIC_URL}/${currentTechnique.mainImage}`}

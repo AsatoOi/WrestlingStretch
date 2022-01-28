@@ -17,7 +17,7 @@ import { H2_2 } from "../atoms/text/H2_2";
 import ProWrestler from "../../data/img/expert/proWrestler.png";
 import Chiropractor from "../../data/img/expert/chiropractor.png";
 import { useNavigate } from "react-router-dom";
-
+import heading7 from "../../data/img/title/heading7.png";
 export const Expert: VFC = memo(() => {
   const navigate = useNavigate();
   const onClickExpert = useCallback(() => navigate("/Expert"), []);
@@ -33,7 +33,7 @@ export const Expert: VFC = memo(() => {
         }
         grandChildBreadCrumb={undefined}
       />
-      <H2_2>専門家からのコメント</H2_2>
+      <H2_2 image={heading7} imageTitle="専門家からのコメント" />
       <Flex justify="center">
         <Flex
           w={{ base: "24rem", md: "45rem" }}

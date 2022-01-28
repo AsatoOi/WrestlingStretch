@@ -15,6 +15,8 @@ import SilverCrown from "../../data/img/crown/silverCrown.png";
 import CopperCrown from "../../data/img/crown/copperCrown.png";
 import mainImage from "../../data/img/illustration/illustration1.png";
 import technique from "../../data/json/technique.json";
+import heading1 from "../../data/img/title/heading1.png";
+import heading2 from "../../data/img/title/heading2.png";
 
 export const Home: VFC = memo(() => {
   const newData = technique.sort((a, b) => (a.likes < b.likes ? 1 : -1));
@@ -29,7 +31,7 @@ export const Home: VFC = memo(() => {
       rankBg: { GoldCrown },
       title: `${newData[0].title}`,
       term: `${newData[0].term}`,
-      name:`${newData[0].name}`,
+      name: `${newData[0].name}`,
       likes: newData[0].likes,
       path: `${newData[0].path}`,
       mainImage: newData[0].mainImage,
@@ -39,7 +41,7 @@ export const Home: VFC = memo(() => {
       rankBg: { SilverCrown },
       title: `${newData[1].title}`,
       term: `${newData[1].term}`,
-      name:`${newData[1].name}`,
+      name: `${newData[1].name}`,
       likes: newData[1].likes,
       path: `${newData[1].path}`,
       mainImage: newData[1].mainImage,
@@ -49,13 +51,13 @@ export const Home: VFC = memo(() => {
       rankBg: { CopperCrown },
       title: `${newData[2].title}`,
       term: `${newData[2].term}`,
-      name:`${newData[2].name}`,
+      name: `${newData[2].name}`,
       likes: newData[2].likes,
       path: `${newData[2].path}`,
       mainImage: newData[2].mainImage,
     },
   ];
-  
+
   return (
     <>
       <Box
@@ -101,7 +103,7 @@ export const Home: VFC = memo(() => {
         </Flex>
       </Box>
       <Box textAlign="center">
-        <H2_1>#プロストって？</H2_1>
+        <H2_1 image={heading1} imageTitle="#プロストって？" />
         <Box position="relative">
           <Text
             fontSize={{ base: "sm", md: "md", lg: "lg" }}
@@ -130,7 +132,7 @@ export const Home: VFC = memo(() => {
             top={{ base: "-13vh", md: "-20vh" }}
           /> */}
         </Box>
-        <H2_1>#プロストランキング</H2_1>
+        <H2_1 image={heading2} imageTitle="#プロストランキング" />
         <Stack pb={10}>
           <TechButton1
             rank={techData[0].rank}

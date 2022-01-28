@@ -20,8 +20,8 @@ import { partsState } from "../../store/partsState";
 import { BooleanFalse } from "../../data/Boolean";
 import { PartsSelect } from "../organisms/parts/PartsSelect";
 import { useNavigate } from "react-router-dom";
-import heading1 from "../../data/img/title/heading1.png";
-import { H2_3 } from "../atoms/text/H2_3";
+import heading3 from "../../data/img/title/heading3.png";
+import { H2_2 } from "../atoms/text/H2_2";
 
 export const Search: VFC = memo(() => {
   const navigate = useNavigate();
@@ -47,7 +47,7 @@ export const Search: VFC = memo(() => {
         }
         grandChildBreadCrumb={undefined}
       />
-      <H2_3 image={heading1} imageTitle="#プロストをさがす" />
+      <H2_2 image={heading3} imageTitle="#プロストをさがす" />
       <DetailedText>
         人体図形から、ストレッチしたい筋肉を選択すると、その筋肉を伸ばせる#プロストが表示されます。
       </DetailedText>

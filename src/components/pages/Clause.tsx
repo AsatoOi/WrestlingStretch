@@ -9,6 +9,7 @@ import { DetailedText } from "../atoms/text/DetailedText";
 import { ClauseElemLeft } from "../molecules/clauseElem/ClauseElemLeft";
 import { ClauseElemRight } from "../molecules/clauseElem/ClauseElemRight";
 import clauseData from "../../data/json/clause.json";
+import heading4 from "../../data/img/title/heading4.png";
 
 export const Clause: VFC = memo(() => {
   const navigate = useNavigate();
@@ -25,7 +26,7 @@ export const Clause: VFC = memo(() => {
         }
         grandChildBreadCrumb={undefined}
       />
-      <H2_2>#プロスト５ヶ条</H2_2>
+      <H2_2 image={heading4} imageTitle="#プロスト５ヶ条" />
       <DetailedText>
         #プロストをパートナーとやりたくても、キッカケがないというあなたへ、パートナーに#プロストを仕掛けるきっかけをお伝えします。
       </DetailedText>

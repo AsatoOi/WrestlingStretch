@@ -1,4 +1,4 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { memo, VFC } from "react";
 
 export const Page404: VFC = memo(() => {

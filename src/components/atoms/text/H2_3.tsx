@@ -1,6 +1,6 @@
 import { memo, VFC } from "react";
 
-import { Flex, Image, Heading } from "@chakra-ui/react";
+import { Flex, Image } from "@chakra-ui/react";
 
 type Props = {
   image: any;
