@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/WrestlingStretch/static/css/main.27858739.css",
-    "main.js": "/WrestlingStretch/static/js/main.fd7c4c55.js",
+    "main.js": "/WrestlingStretch/static/js/main.e2fd0b5f.js",
     "static/js/787.2b97a104.chunk.js": "/WrestlingStretch/static/js/787.2b97a104.chunk.js",
     "static/media/backGroundImg.png": "/WrestlingStretch/static/media/backGroundImg.11e8818f9cfc85113279.png",
     "static/media/mainTitle2.png": "/WrestlingStretch/static/media/mainTitle2.f36209a15a7af5471424.png",
@@ -19,11 +19,17 @@
     "static/media/mainTitle.png": "/WrestlingStretch/static/media/mainTitle.169d2860815f25d47949.png",
     "static/media/no.9.png": "/WrestlingStretch/static/media/no.9.2f017c3b9ab7841aaf38.png",
     "static/media/backGroundImg_2.png": "/WrestlingStretch/static/media/backGroundImg_2.ef48521e7a0d28cd8451.png",
-    "static/media/heading1.png": "/WrestlingStretch/static/media/heading1.52527be41413d254a98b.png",
+    "static/media/heading6.png": "/WrestlingStretch/static/media/heading6.b0662b62e651e52011b4.png",
+    "static/media/heading3.png": "/WrestlingStretch/static/media/heading3.17f193536f969ffd5eae.png",
+    "static/media/heading5.png": "/WrestlingStretch/static/media/heading5.3b5da84bbc68b45f1f27.png",
+    "static/media/heading2.png": "/WrestlingStretch/static/media/heading2.0cc3bc76b28b9ff3009f.png",
+    "static/media/heading7.png": "/WrestlingStretch/static/media/heading7.ba22dcc8db916ce0692d.png",
+    "static/media/heading1.png": "/WrestlingStretch/static/media/heading1.c49f860fa893d7306838.png",
     "static/media/Quadriceps.png": "/WrestlingStretch/static/media/Quadriceps.af21a83554053d633f5f.png",
     "static/media/Gastrocnemius.png": "/WrestlingStretch/static/media/Gastrocnemius.9fe3eb51202217ca188f.png",
     "static/media/QuadricepsY.png": "/WrestlingStretch/static/media/QuadricepsY.e3f1318b189e4e551cc0.png",
     "static/media/legs.png": "/WrestlingStretch/static/media/legs.8acee9447f714d1739f9.png",
+    "static/media/heading4.png": "/WrestlingStretch/static/media/heading4.4a90ee5861907e2267fe.png",
     "static/media/GastrocnemiusY.png": "/WrestlingStretch/static/media/GastrocnemiusY.20636eb44ad2bb087bce.png",
     "static/media/face.png": "/WrestlingStretch/static/media/face.66f70ccfdd75bd7e1608.png",
     "static/media/Hamstring.png": "/WrestlingStretch/static/media/Hamstring.1f024952e3c803b2b3ad.png",
@@ -39,11 +45,11 @@
     "static/media/Triceps.png": "/WrestlingStretch/static/media/Triceps.103cfa9f46f34e1a7dbb.png",
     "index.html": "/WrestlingStretch/index.html",
     "main.27858739.css.map": "/WrestlingStretch/static/css/main.27858739.css.map",
-    "main.fd7c4c55.js.map": "/WrestlingStretch/static/js/main.fd7c4c55.js.map",
+    "main.e2fd0b5f.js.map": "/WrestlingStretch/static/js/main.e2fd0b5f.js.map",
     "787.2b97a104.chunk.js.map": "/WrestlingStretch/static/js/787.2b97a104.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.27858739.css",
-    "static/js/main.fd7c4c55.js"
+    "static/js/main.e2fd0b5f.js"
   ]
 }
