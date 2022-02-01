@@ -20,12 +20,7 @@ export const TechButton4: VFC<Props> = memo(
     const onClickTech = useCallback(() => navigate(`/SearchRoutes${path}`), []);
     return (
       <>
-        <Flex
-          justify="center"
-          position="relative"
-          pt={6}
-          onClick={onClickTech}
-        >
+        <Flex justify="center" position="relative" pt={6} onClick={onClickTech}>
           <Flex
             bg="white"
             position="relative"
@@ -55,7 +50,6 @@ export const TechButton4: VFC<Props> = memo(
             <Box
               h={{ base: "28", md: "40" }}
               w={{ base: "28", md: "40" }}
-              bg="gray.400"
               borderRadius="2xl"
               mx={{ base: 2, md: 3 }}
             >

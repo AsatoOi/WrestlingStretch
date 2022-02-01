@@ -12,7 +12,7 @@ export const PrimaryButton: VFC<Props> = memo(({ children, onClick }) => {
     <Box textAlign="center">
       <Button
         onClick={onClick}
-        fontSize={{ base: "sm", md: "lg", lg: "2xl" }}
+        fontSize={{ base: "sm", md: "lg" }}
         bg="#446CCF"
         color="white"
         opacity={0.9}
