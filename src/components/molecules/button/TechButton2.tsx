@@ -30,7 +30,7 @@ export const TechButton2: VFC<Props> = memo(
           _before={{
             content: `"${rank}"`,
             textAlign: "center",
-            color: "cyan.900",
+            color: "white",
             fontWeight: "bold",
             fontSize: { base: "md", md: "lg" },
             position: "absolute",

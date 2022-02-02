@@ -36,7 +36,7 @@ export const TechButton1: VFC<Props> = memo(
             boxShadow={{ base: "lg", md: "lg" }}
             _before={{
               content: `"${rank}"`,
-              color: "cyan.900",
+              color: "white",
               fontWeight: "bold",
               fontSize: { base: "md", md: "lg" },
               position: "absolute",
