@@ -40,11 +40,10 @@ export const MenuDrawer: VFC<Props> = memo(
     return (
       <Drawer placement="right" size="full" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay>
-          <DrawerContent bg="pink.400" opacity="0.9" position="relative">
+          <DrawerContent bg="pink.400" opacity="0.9" position="relative" zIndex={10000}>
             <DrawerCloseButton
               mt={2}
               mr={1}
-              color="white"
               size="md"
               _focus={{ boxShadow: "none" }}
               _hover={{ bgColor: "none" }}

@@ -8,12 +8,12 @@ import { TikTokButton } from "../atoms/button/TikTokButton";
 import { PrecautionaryStatement } from "../molecules/Accordion/PrecautionaryStatement";
 import { H2_1 } from "../atoms/text/H2_1";
 import { TechButton1 } from "../molecules/button/TechButton1";
+import { InView } from "../../hooks/InView";
 import BackgroundImage from "../../data/img/backGround/backGroundImg.png";
 import MainTitle2 from "../../data/img/title/mainTitle2.png";
 import GoldCrown from "../../data/img/crown/goldCrown.png";
 import SilverCrown from "../../data/img/crown/silverCrown.png";
 import CopperCrown from "../../data/img/crown/copperCrown.png";
-import mainImage from "../../data/img/illustration/illustration1.png";
 import technique from "../../data/json/technique.json";
 import heading1 from "../../data/img/title/heading1.png";
 import heading2 from "../../data/img/title/heading2.png";
@@ -77,101 +77,111 @@ export const Home: VFC = memo(() => {
         </Box>
         <Flex flexFlow="column" h="93vh" justify="center">
           <Box flex="1" textAlign="center">
-            <Box
-              w={{
-                base: "22rem",
-                sm: "25rem",
-                md: "35rem",
-              }}
-              mt="20vh"
-              mb={8}
-              mx="auto"
-              borderRadius="lg"
-              display="flex"
-              justify="center"
-              alignItems="center"
-            >
-              <Image
-                fit="contain"
-                objectFit="cover"
-                src={MainTitle2}
-                alt="Main logo"
-              />
-            </Box>
-            <PrimaryButton onClick={onClickSearchRoutes}>
-              さっそく#プロストを見る
-            </PrimaryButton>
+            <InView>
+              <Box
+                w={{
+                  base: "22rem",
+                  sm: "25rem",
+                  md: "35rem",
+                }}
+                mt="20vh"
+                mb={8}
+                mx="auto"
+                borderRadius="lg"
+                display="flex"
+                justify="center"
+                alignItems="center"
+              >
+                <Image
+                  fit="contain"
+                  objectFit="cover"
+                  src={MainTitle2}
+                  alt="Main logo"
+                />
+              </Box>
+            </InView>
+            <InView>
+              <PrimaryButton onClick={onClickSearchRoutes}>
+                さっそく#プロストを見る
+              </PrimaryButton>
+            </InView>
           </Box>
           <ScrollDownButton />
           <PrecautionaryStatement />
         </Flex>
       </Box>
       <Box textAlign="center">
-        <H2_1 image={heading1} imageTitle="#プロストって？" />
-        <Box position="relative">
-          <Text
-            fontSize={{ base: "sm", md: "md", lg: "lg" }}
-            color="#eee"
-            fontWeight="bold"
-            lineHeight={{ base: "2.5rem", md: "3.5rem" }}
-            zIndex={1}
-          >
-            #プロストとは、
-            <br /> 「プロレス技でストレッチしよう！」の略称です。
-            <br />
-            あなたのパートナーと、#プロストを通して
-            <br />
-            スキンシップを取ることで、
-            <br />
-            パートナーとのおうち時間の充実に繋がります。
-            <br />
-            さぁ、カップルで#プロストを始めましょう。
-          </Text>
-          {/* <Image
-            src={mainImage}
-            alt="main image"
-            w={{ base: 250, md: 400, lg: 700 }}
-            position="absolute"
-            left={{ base: "55%", md: "60%" }}
-            top={{ base: "-13vh", md: "-20vh" }}
-          /> */}
-        </Box>
-        <H2_1 image={heading2} imageTitle="#プロストランキング" />
+        <InView>
+          <H2_1 image={heading1} imageTitle="#プロストって？" />
+        </InView>
+        <InView>
+          <Box position="relative">
+            <Text
+              fontSize={{ base: "sm", md: "md", lg: "lg" }}
+              color="#eee"
+              fontWeight="bold"
+              lineHeight={{ base: "2.5rem", md: "3.5rem" }}
+              zIndex={1}
+            >
+              #プロストとは、
+              <br /> 「プロレス技でストレッチしよう！」の略称です。
+              <br />
+              あなたのパートナーと、#プロストを通して
+              <br />
+              スキンシップを取ることで、
+              <br />
+              パートナーとのおうち時間の充実に繋がります。
+              <br />
+              さぁ、カップルで#プロストを始めましょう。
+            </Text>
+          </Box>
+        </InView>
+        <InView>
+          <H2_1 image={heading2} imageTitle="#プロストランキング" />
+        </InView>
         <Stack pb={10}>
-          <TechButton1
-            rank={techData[0].rank}
-            rankBg={techData[0].rankBg.GoldCrown}
-            techTitle={techData[0].title}
-            term={techData[0].term}
-            name={techData[0].name}
-            likes={techData[0].likes}
-            path={techData[0].path}
-            mainImage={techData[0].mainImage}
-          />
-          <TechButton1
-            rank={techData[1].rank}
-            rankBg={techData[1].rankBg.SilverCrown}
-            techTitle={techData[1].title}
-            term={techData[1].term}
-            name={techData[1].name}
-            likes={techData[1].likes}
-            path={techData[1].path}
-            mainImage={techData[1].mainImage}
-          />
-          <TechButton1
-            rank={techData[2].rank}
-            rankBg={techData[2].rankBg.CopperCrown}
-            techTitle={techData[2].title}
-            term={techData[2].term}
-            name={techData[2].name}
-            likes={techData[2].likes}
-            path={techData[2].path}
-            mainImage={techData[2].mainImage}
-          />
+          <InView>
+            <TechButton1
+              rank={techData[0].rank}
+              rankBg={techData[0].rankBg.GoldCrown}
+              techTitle={techData[0].title}
+              term={techData[0].term}
+              name={techData[0].name}
+              likes={techData[0].likes}
+              path={techData[0].path}
+              mainImage={techData[0].mainImage}
+            />
+          </InView>
+          <InView>
+            <TechButton1
+              rank={techData[1].rank}
+              rankBg={techData[1].rankBg.SilverCrown}
+              techTitle={techData[1].title}
+              term={techData[1].term}
+              name={techData[1].name}
+              likes={techData[1].likes}
+              path={techData[1].path}
+              mainImage={techData[1].mainImage}
+            />
+          </InView>
+          <InView>
+            <TechButton1
+              rank={techData[2].rank}
+              rankBg={techData[2].rankBg.CopperCrown}
+              techTitle={techData[2].title}
+              term={techData[2].term}
+              name={techData[2].name}
+              likes={techData[2].likes}
+              path={techData[2].path}
+              mainImage={techData[2].mainImage}
+            />
+          </InView>
         </Stack>
-        <PrimaryButton onClick={onClickSearchRoutes}>
-          もっと#プロストを見る
-        </PrimaryButton>
+        <InView>
+          <PrimaryButton onClick={onClickSearchRoutes}>
+            もっと#プロストを見る
+          </PrimaryButton>
+        </InView>
       </Box>
     </>
   );

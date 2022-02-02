@@ -9,6 +9,7 @@ import technique from "../../../data/json/technique.json";
 import { H3_1 } from "../../atoms/text/H3-1";
 import { ViewAll } from "../../atoms/button/ViewAll";
 import { partsState } from "../../../store/partsState";
+import { InView } from "../../../hooks/InView";
 
 export const PartsSelect: VFC = memo(() => {
   const partsBoolean = useRecoilValue(partsState);
@@ -41,15 +42,16 @@ export const PartsSelect: VFC = memo(() => {
         alignItems="center"
       >
         {recommendTechnique.map((tech) => (
-          <TechButton4
-            key={tech.title}
-            techTitle={tech.title}
-            name={tech.name}
-            likes={tech.likes}
-            path={tech.path}
-            term={tech.term}
-            main={tech.mainImage}
-          />
+          <InView key={tech.title}>
+            <TechButton4
+              techTitle={tech.title}
+              name={tech.name}
+              likes={tech.likes}
+              path={tech.path}
+              term={tech.term}
+              main={tech.mainImage}
+            />
+          </InView>
         ))}
       </Flex>
       <Flex justify="center">
@@ -59,92 +61,15 @@ export const PartsSelect: VFC = memo(() => {
           m="auto"
         >
           {otherTechnique.map((tech) => (
-            <TechButton3
-              key={tech.title}
-              techTitle={tech.title}
-              likes={tech.likes}
-              path={tech.path}
-              main={tech.mainImage}
-            />
+            <InView key={tech.title}>
+              <TechButton3
+                techTitle={tech.title}
+                likes={tech.likes}
+                path={tech.path}
+                main={tech.mainImage}
+              />
+            </InView>
           ))}
-          {/* <TechButton3
-            title={technique[0].title}
-            path={technique[0].path}
-            like={technique[0].likes}
-            main={technique[0].mainImage}
-          />
-          <TechButton3
-            title={technique[1].title}
-            path={technique[1].path}
-            like={technique[1].likes}
-            main={technique[1].mainImage}
-          />
-          <TechButton3
-            title={technique[2].title}
-            path={technique[2].path}
-            like={technique[2].likes}
-            main={technique[2].mainImage}
-          />
-          <TechButton3
-            title={technique[1].title}
-            path={technique[1].path}
-            like={technique[1].likes}
-            main={technique[1].mainImage}
-          />
-          <TechButton3
-            title={technique[0].title}
-            path={technique[0].path}
-            like={technique[0].likes}
-            main={technique[0].mainImage}
-          />
-          <TechButton3
-            title={technique[1].title}
-            path={technique[1].path}
-            like={technique[1].likes}
-            main={technique[1].mainImage}
-          />
-          <TechButton3
-            title={technique[2].title}
-            path={technique[2].path}
-            like={technique[2].likes}
-            main={technique[2].mainImage}
-          />
-          <TechButton3
-            title={technique[1].title}
-            path={technique[1].path}
-            like={technique[1].likes}
-            main={technique[1].mainImage}
-          />
-          <TechButton3
-            title={technique[2].title}
-            path={technique[2].path}
-            like={technique[2].likes}
-            main={technique[2].mainImage}
-          />
-          <TechButton3
-            title={technique[0].title}
-            path={technique[0].path}
-            like={technique[0].likes}
-            main={technique[0].mainImage}
-          />
-          <TechButton3
-            title={technique[1].title}
-            path={technique[1].path}
-            like={technique[1].likes}
-            main={technique[1].mainImage}
-          />
-          <TechButton3
-            title={technique[2].title}
-            path={technique[2].path}
-            like={technique[2].likes}
-            main={technique[2].mainImage}
-          />
-          <TechButton3
-            title={technique[0].title}
-            path={technique[0].path}
-            like={technique[0].likes}
-            main={technique[0].mainImage}
-          /> */}
         </Flex>
       </Flex>
       <ViewAll />

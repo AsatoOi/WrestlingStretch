@@ -1,7 +1,6 @@
 /*eslint-disable react-hooks/exhaustive-deps*/
 import { memo, VFC, useCallback } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-
 import {
   Box,
   BreadcrumbItem,
@@ -22,13 +21,14 @@ import { DetailedText } from "../atoms/text/DetailedText";
 import { Manner } from "../molecules/manner/Manner";
 import { HeartButton } from "../atoms/button/HeartButton";
 import technique from "../../data/json/technique.json";
+import { InView } from "../../hooks/InView";
 
 export const TechniquePara: VFC = memo(() => {
   const { isOpen, onToggle } = useDisclosure();
   const { Part } = useParams();
   const navigate = useNavigate();
   const onClickSearchRoutes = useCallback(() => navigate("/SearchRoutes"), []);
-  const onClickPart = useCallback(() => navigate(`/SearchRoutes${Part}`), []);
+  const onClickPart = useCallback(() => navigate(`/SearchRoutes/${Part}`), []);
   const onClickBack = () => navigate(-1);
 
   const selectTechnique = technique.filter((tech) => tech.path === `/${Part}`);
@@ -68,7 +68,7 @@ export const TechniquePara: VFC = memo(() => {
         pt={{ base: 10, md: 16 }}
         pb={{ base: 8, md: 10 }}
       >
-        <Box>
+        <InView>
           <Box
             h={{ base: "18rem", md: "22rem", lg: "28rem" }}
             w={{ base: "18rem", md: "22rem", lg: "28rem" }}
@@ -81,24 +81,28 @@ export const TechniquePara: VFC = memo(() => {
             />
           </Box>
           <HeartButton isOpen={isOpen} onToggle={onToggle} />
-        </Box>
+        </InView>
         <Box pt={10} px={{ base: 0, md: 10 }}>
-          <Text
-            fontWeight="bold"
-            fontSize={{ base: "lg", md: "2xl" }}
-            color="white"
-            pl={{ base: 10, md: 10 }}
-          >
-            {currentTechnique.term}
-          </Text>
-          <Text
-            fontSize={{ base: "md", md: "xl" }}
-            color="white"
-            py={3}
-            textAlign="center"
-          >
-            {currentTechnique.name}
-          </Text>
+          <InView>
+            <Text
+              fontWeight="bold"
+              fontSize={{ base: "lg", md: "2xl" }}
+              color="white"
+              pl={{ base: 10, md: 10 }}
+            >
+              {currentTechnique.term}
+            </Text>
+          </InView>
+          <InView>
+            <Text
+              fontSize={{ base: "md", md: "xl" }}
+              color="white"
+              py={3}
+              textAlign="center"
+            >
+              {currentTechnique.name}
+            </Text>
+          </InView>
           <Box px={10}>
             <TechRadar radar={currentTechnique.radar} />
           </Box>
@@ -121,28 +125,44 @@ export const TechniquePara: VFC = memo(() => {
         w="70%"
         m="auto"
       >
-        <Manner image={`${process.env.PUBLIC_URL}/${currentTechnique.manner1}`}>
-          {`①　${currentTechnique.text1}`}
-        </Manner>
-        <Manner image={`${process.env.PUBLIC_URL}/${currentTechnique.manner2}`}>
-          {`②　${currentTechnique.text2}`}
-        </Manner>
-        <Manner image={`${process.env.PUBLIC_URL}/${currentTechnique.manner3}`}>
-          {`③　${currentTechnique.text3}`}
-        </Manner>
+        <InView>
+          <Manner
+            image={`${process.env.PUBLIC_URL}/${currentTechnique.manner1}`}
+          >
+            {`①　${currentTechnique.text1}`}
+          </Manner>
+        </InView>
+        <InView>
+          <Manner
+            image={`${process.env.PUBLIC_URL}/${currentTechnique.manner2}`}
+          >
+            {`②　${currentTechnique.text2}`}
+          </Manner>
+        </InView>
+        <InView>
+          <Manner
+            image={`${process.env.PUBLIC_URL}/${currentTechnique.manner3}`}
+          >
+            {`③　${currentTechnique.text3}`}
+          </Manner>
+        </InView>
       </Flex>
-      <Heading
-        as="h4"
-        color="white"
-        textAlign="center"
-        size="sm"
-        mt={20}
-        position="relative"
-        left="-1"
-      >
-        プロレスラーからのイチコメ
-      </Heading>
-      <DetailedText>{currentTechnique.comment}</DetailedText>
+      <InView>
+        <Heading
+          as="h4"
+          color="white"
+          textAlign="center"
+          size="sm"
+          mt={20}
+          position="relative"
+          left="-1"
+        >
+          プロレスラーからのイチコメ
+        </Heading>
+      </InView>
+      <InView>
+        <DetailedText>{currentTechnique.comment}</DetailedText>
+      </InView>
       <Flex justify="center" pt={10}>
         <Button
           onClick={onClickBack}

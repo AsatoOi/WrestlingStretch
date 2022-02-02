@@ -14,6 +14,7 @@ import { H2_1 } from "../atoms/text/H2_1";
 import { TopBreadCrumb } from "../atoms/breadCrumb/TopBreadCrumb";
 import { TikTokFrame } from "../atoms/tiktok/TikTokFrame";
 import { DetailedText } from "../atoms/text/DetailedText";
+import { InView } from "../../hooks/InView";
 import heading5 from "../../data/img/title/heading5.png";
 import heading6 from "../../data/img/title/heading6.png";
 import no1 from "../../data/img/tikTok/no.1.png";
@@ -50,23 +51,49 @@ export const TikTok: VFC = memo(() => {
         </DetailedText>
         <Flex justify="center">
           <Flex flexWrap="wrap" w={{ base: "20rem", md: "48rem" }} m="auto">
-            <TikTokFrame elm={no1} />
-            <TikTokFrame elm={no2} />
-            <TikTokFrame elm={no3} />
-            <TikTokFrame elm={no4} />
-            <TikTokFrame elm={no5} />
-            <TikTokFrame elm={no6} />
-            <TikTokFrame elm={no7} />
-            <TikTokFrame elm={no8} />
+            <InView>
+              <TikTokFrame elm={no1} />
+            </InView>
+            <InView>
+              <TikTokFrame elm={no2} />
+            </InView>
+            <InView>
+              <TikTokFrame elm={no3} />
+            </InView>
+            <InView>
+              <TikTokFrame elm={no4} />
+            </InView>
+            <InView>
+              <TikTokFrame elm={no5} />
+            </InView>
+            <InView>
+              <TikTokFrame elm={no6} />
+            </InView>
+            <InView>
+              <TikTokFrame elm={no7} />
+            </InView>
+            <InView>
+              <TikTokFrame elm={no8} />
+            </InView>
           </Flex>
         </Flex>
-        <H2_1 image={heading6} imageTitle="#プロスト公式TikTok" />
+        <InView>
+          <H2_1 image={heading6} imageTitle="#プロスト公式TikTok" />
+        </InView>
         <Flex justify="center">
           <Flex flexWrap="wrap" w={{ base: "20rem", md: "48rem" }} m="auto">
-            <TikTokFrame elm={no9} />
-            <TikTokFrame elm={no10} />
-            <TikTokFrame elm={no1} />
-            <TikTokFrame elm={no2} />
+            <InView>
+              <TikTokFrame elm={no9} />
+            </InView>
+            <InView>
+              <TikTokFrame elm={no10} />
+            </InView>
+            <InView>
+              <TikTokFrame elm={no1} />
+            </InView>
+            <InView>
+              <TikTokFrame elm={no2} />
+            </InView>
           </Flex>
         </Flex>
       </Box>

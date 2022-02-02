@@ -8,6 +8,7 @@ import { H2_2 } from "../atoms/text/H2_2";
 import { DetailedText } from "../atoms/text/DetailedText";
 import { ClauseElemLeft } from "../molecules/clauseElem/ClauseElemLeft";
 import { ClauseElemRight } from "../molecules/clauseElem/ClauseElemRight";
+import { InView } from "../../hooks/InView";
 import clauseData from "../../data/json/clause.json";
 import heading4 from "../../data/img/title/heading4.png";
 
@@ -30,26 +31,34 @@ export const Clause: VFC = memo(() => {
       <DetailedText>
         #プロストをパートナーとやりたくても、キッカケがないというあなたへ、パートナーに#プロストを仕掛けるきっかけをお伝えします。
       </DetailedText>
-      <ClauseElemLeft
-        image={clauseData[0].image}
-        title={clauseData[0].title}
-        text={clauseData[0].text}
-      />
-      <ClauseElemRight
-        image={clauseData[1].image}
-        title={clauseData[1].title}
-        text={clauseData[1].text}
-      />
-      <ClauseElemLeft
-        image={clauseData[2].image}
-        title={clauseData[2].title}
-        text={clauseData[2].text}
-      />
-      <ClauseElemRight
-        image={clauseData[3].image}
-        title={clauseData[3].title}
-        text={clauseData[3].text}
-      />
+      <InView>
+        <ClauseElemLeft
+          image={clauseData[0].image}
+          title={clauseData[0].title}
+          text={clauseData[0].text}
+        />
+      </InView>
+      <InView>
+        <ClauseElemRight
+          image={clauseData[1].image}
+          title={clauseData[1].title}
+          text={clauseData[1].text}
+        />
+      </InView>
+      <InView>
+        <ClauseElemLeft
+          image={clauseData[2].image}
+          title={clauseData[2].title}
+          text={clauseData[2].text}
+        />
+      </InView>
+      <InView>
+        <ClauseElemRight
+          image={clauseData[3].image}
+          title={clauseData[3].title}
+          text={clauseData[3].text}
+        />
+      </InView>
     </Box>
   );
 });

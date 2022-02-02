@@ -19,7 +19,7 @@ export const Header: VFC = memo(() => {
   const onClickTikTok = useCallback(() => navigate("/TikTok"), []);
   const onClickExpert = useCallback(() => navigate("/Expert"), []);
   return (
-    <Box position="fixed" width="100%" zIndex="10000">
+    <Box position="fixed" width="100%" zIndex="100">
       <Flex
         as="nav"
         bg="#5482F6"
