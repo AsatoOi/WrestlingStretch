@@ -36,6 +36,7 @@ export const Hamstring: VFC = memo(() => {
       left={{ base: "29.1%", md: "29.8%" }}
       top="57%"
       opacity={1}
+      zIndex={1}
       _hover={{ opacity: 0.8 }}
       onClick={onClickHamstringTrue}
     />
@@ -47,6 +48,7 @@ export const Hamstring: VFC = memo(() => {
       h={{ base: "4.3rem", md: "8rem" }}
       left={{ base: "29.1%", md: "29.8%" }}
       top="57%"
+      zIndex={1}
       onClick={onClickHamstringFalse}
     />
   );

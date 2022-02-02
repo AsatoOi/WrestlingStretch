@@ -34,7 +34,7 @@ export const Hip: VFC = memo(() => {
       h={{ base: "2.8rem", md: "5rem" }}
       left={{ base: "29%", md: "30.2%" }}
       top="46%"
-      zIndex={1}
+      zIndex={2}
       opacity={1}
       _hover={{ opacity: 0.8 }}
       onClick={onClickHipTrue}
@@ -47,7 +47,7 @@ export const Hip: VFC = memo(() => {
       h={{ base: "2.8rem", md: "5rem" }}
       left={{ base: "29%", md: "30.2%" }}
       top="46%"
-      zIndex={1}
+      zIndex={2}
       onClick={onClickHipFalse}
     />
   );

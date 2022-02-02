@@ -36,6 +36,7 @@ export const DeltoidBack: VFC = memo(() => {
       left={{ base: "15%", md: "15.4%" }}
       top="19.5%"
       opacity={1}
+      zIndex={1}
       _hover={{ opacity: 0.8 }}
       onClick={onClickDeltoidBackTrue}
     />
@@ -47,6 +48,7 @@ export const DeltoidBack: VFC = memo(() => {
       h={{ base: "2.8rem", md: "5.1rem" }}
       left={{ base: "15%", md: "15.4%" }}
       top="19.5%"
+      zIndex={1}
       onClick={onClickDeltoidBackFalse}
     />
   );

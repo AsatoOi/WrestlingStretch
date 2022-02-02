@@ -36,6 +36,7 @@ export const Arms: VFC = memo(() => {
       left={{ base: "13.2%", md: "12.9%" }}
       top="40.4%"
       opacity={1}
+      zIndex={1}
       _hover={{ opacity: 0.8 }}
       onClick={onClickArmsTrue}
     />
@@ -47,6 +48,7 @@ export const Arms: VFC = memo(() => {
       h={{ base: "4.1rem", md: "7.5rem" }}
       left={{ base: "13.2%", md: "12.9%" }}
       top="40.4%"
+      zIndex={1}
       onClick={onClickArmsFalse}
     />
   );

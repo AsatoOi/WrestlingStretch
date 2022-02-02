@@ -31,7 +31,7 @@ export const Abdominal: VFC = memo(() => {
     <Image
       src={abdominal}
       alt="腹筋のイラスト"
-      zIndex={1}
+      zIndex={2}
       position="absolute"
       h={{ base: "5.3rem", md: "9.7rem" }}
       left={{ base: "30%", md: "30.7%" }}
@@ -44,7 +44,7 @@ export const Abdominal: VFC = memo(() => {
     <Image
       src={abdominalY}
       alt="腹筋のイラスト"
-      zIndex={1}
+      zIndex={2}
       position="absolute"
       h={{ base: "5.3rem", md: "9.7rem" }}
       left={{ base: "30%", md: "30.7%" }}

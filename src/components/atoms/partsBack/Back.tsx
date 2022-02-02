@@ -35,7 +35,7 @@ export const Back: VFC = memo(() => {
       h={{ base: "6rem", md: "11rem" }}
       left={{ base: "31%", md: "32.4%" }}
       top="20%"
-      zIndex={2}
+      zIndex={3}
       opacity={1}
       _hover={{ opacity: 0.8 }}
       onClick={onClickBackTrue}
@@ -48,7 +48,7 @@ export const Back: VFC = memo(() => {
       h={{ base: "6rem", md: "11rem" }}
       left={{ base: "31%", md: "32.4%" }}
       top="20%"
-      zIndex={2}
+      zIndex={3}
       onClick={onClickBackFalse}
     />
   );

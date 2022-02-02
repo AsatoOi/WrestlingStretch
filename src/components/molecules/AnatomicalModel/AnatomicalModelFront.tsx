@@ -13,9 +13,13 @@ import { Biceps } from "../../atoms/partsFront/Biceps";
 import { Arms } from "../../atoms/partsFront/Arm";
 import { Abdominal } from "../../atoms/partsFront/Abdominal";
 import { Quadriceps } from "../../atoms/partsFront/Quadriceps";
+import { BooleanFalse } from "../../../data/Boolean";
 
 export const AnatomicalModelFront: VFC = memo(() => {
   const [partsBoolean, setPartsBoolean] = useRecoilState(partsState);
+  const onClickReset = () => {
+    setPartsBoolean(BooleanFalse);
+  };
 
   return (
     <Box
@@ -24,6 +28,14 @@ export const AnatomicalModelFront: VFC = memo(() => {
       mr={{ base: "none", md: 6, lg: 12 }}
       position="relative"
     >
+      <Box
+        h={{ base: "24rem", md: "44rem" }}
+        width={{ base: "20rem", sm: "30rem", md: "24rem", lg: "32rem" }}
+        mr={{ base: "none", md: 6, lg: 12 }}
+        left={{ base: "-3rem", sm: "-8rem", md: "-2rem", lg: "-3rem" }}
+        position="absolute"
+        onClick={onClickReset}
+      />
       <Image
         src={face}
         alt="顔のイラスト"

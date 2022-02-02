@@ -11,10 +11,7 @@ type Props = {
 
 export const AnatomicalModelsBase: VFC<Props> = memo(({ isOpen }) => {
   return (
-    <Flex
-      justify="center"
-      display={{ base: "flex", md: "none" }}
-    >
+    <Flex justify="center" display={{ base: "flex", md: "none" }}>
       {isOpen === true ? <AnatomicalModelBack /> : <AnatomicalModelFront />}
     </Flex>
   );

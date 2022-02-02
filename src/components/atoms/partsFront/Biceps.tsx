@@ -36,6 +36,7 @@ export const Biceps: VFC = memo(() => {
       left={{ base: "14.2%", md: "14.4%" }}
       top="29.4%"
       opacity={1}
+      zIndex={1}
       _hover={{ opacity: 0.8 }}
       onClick={onClickBicepsTrue}
     />
@@ -47,6 +48,7 @@ export const Biceps: VFC = memo(() => {
       h={{ base: "3.1rem", md: "5.6rem" }}
       left={{ base: "14.2%", md: "14.4%" }}
       top="29.4%"
+      zIndex={1}
       onClick={onClickBicepsFalse}
     />
   );

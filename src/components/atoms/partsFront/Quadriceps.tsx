@@ -36,6 +36,7 @@ export const Quadriceps: VFC = memo(() => {
       left={{ base: "27.5%", md: "26.5%" }}
       top="49.5%"
       opacity={1}
+      zIndex={1}
       _hover={{ opacity: 0.8 }}
       onClick={onClickQuadricepsTrue}
     />
@@ -47,6 +48,7 @@ export const Quadriceps: VFC = memo(() => {
       h={{ base: "6rem", md: "11.4rem" }}
       left={{ base: "27.5%", md: "26.5%" }}
       top="49.5%"
+      zIndex={1}
       onClick={onClickQuadricepsFalse}
     />
   );

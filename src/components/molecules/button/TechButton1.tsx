@@ -57,7 +57,7 @@ export const TechButton1: VFC<Props> = memo(
               borderRadius="2xl"
               mx={{ base: 2, md: 4 }}
             >
-              <Image src={mainImage} alt="main image" />
+              <Image src={mainImage} alt="main image" borderRadius="2xl" />
             </Box>
             <Flex
               flexDirection="column"

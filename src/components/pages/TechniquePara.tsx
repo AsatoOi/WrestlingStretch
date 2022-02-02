@@ -75,6 +75,7 @@ export const TechniquePara: VFC = memo(() => {
             ml={{ base: "none", md: 12 }}
           >
             <Image
+              borderRadius="3xl"
               src={`${process.env.PUBLIC_URL}/${currentTechnique.mainImage}`}
               alt={`${currentTechnique.title}のメインイメージ`}
             />
@@ -126,7 +127,7 @@ export const TechniquePara: VFC = memo(() => {
         <Manner image={`${process.env.PUBLIC_URL}/${currentTechnique.manner2}`}>
           {`②　${currentTechnique.text2}`}
         </Manner>
-        <Manner image={`${process.env.PUBLIC_URL}/${currentTechnique.manner2}`}>
+        <Manner image={`${process.env.PUBLIC_URL}/${currentTechnique.manner3}`}>
           {`③　${currentTechnique.text3}`}
         </Manner>
       </Flex>

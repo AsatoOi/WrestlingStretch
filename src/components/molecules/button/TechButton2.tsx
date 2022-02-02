@@ -45,7 +45,11 @@ export const TechButton2: VFC<Props> = memo(
             mr: "10",
           }}
         >
-          <Image src={main} />
+          <Image
+            src={main}
+            alt={`${title}のメインビジュアル`}
+            borderRadius="3xl"
+          />
         </Box>
         <Heading
           as="h4"

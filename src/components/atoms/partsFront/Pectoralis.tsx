@@ -31,7 +31,7 @@ export const Pectoralis: VFC = memo(() => {
   return partsBoolean[0] === false ? (
     <Image
       src={pectoralis}
-      zIndex={2}
+      zIndex={3}
       alt="胸のイラスト"
       position="absolute"
       h={{ base: "3rem", md: "5.8rem" }}
@@ -44,7 +44,7 @@ export const Pectoralis: VFC = memo(() => {
   ) : (
     <Image
       src={pectoralisY}
-      zIndex={2}
+      zIndex={3}
       alt="胸のイラスト"
       position="absolute"
       h={{ base: "3rem", md: "5.8rem" }}

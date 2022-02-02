@@ -36,6 +36,7 @@ export const Gastrocnemius: VFC = memo(() => {
       left={{ base: "30%", md: "30.5%" }}
       top="75%"
       opacity={1}
+      zIndex={1}
       _hover={{ opacity: 0.8 }}
       onClick={onClickGastrocnemiusTrue}
     />
@@ -47,6 +48,7 @@ export const Gastrocnemius: VFC = memo(() => {
       h={{ base: "5.7rem", md: "10.8rem" }}
       left={{ base: "30%", md: "30.5%" }}
       top="75%"
+      zIndex={1}
       onClick={onClickGastrocnemiusFalse}
     />
   );
