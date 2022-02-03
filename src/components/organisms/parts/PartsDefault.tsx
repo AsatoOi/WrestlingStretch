@@ -26,6 +26,7 @@ export const PartsDefault: VFC = memo(() => {
   return (
     <>
       <H3_1 />
+      <div id=""></div>
       <Divider
         mx="auto"
         borderWidth="revert"

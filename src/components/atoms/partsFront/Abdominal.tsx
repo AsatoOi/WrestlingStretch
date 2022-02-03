@@ -8,8 +8,18 @@ import { partsState } from "../../../store/partsState";
 import { BooleanFalse } from "../../../data/Boolean.js";
 
 export const Abdominal: VFC = memo(() => {
+  const scrollDown = () => {
+    window.scrollTo({
+      top: 1000,
+      behavior: "smooth",
+    });
+  };
   const [partsBoolean, setPartsBoolean] = useRecoilState(partsState);
   const onClickAbdominalTrue = () => {
+    window.scrollTo({
+      top: 1000,
+      behavior: "smooth",
+    });
     setPartsBoolean([
       false,
       false,
