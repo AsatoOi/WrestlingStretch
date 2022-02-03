@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/WrestlingStretch/static/css/main.27858739.css",
-    "main.js": "/WrestlingStretch/static/js/main.324cc98f.js",
+    "main.js": "/WrestlingStretch/static/js/main.3a2cf989.js",
     "static/js/787.2b97a104.chunk.js": "/WrestlingStretch/static/js/787.2b97a104.chunk.js",
     "static/media/backGroundImg.png": "/WrestlingStretch/static/media/backGroundImg.11e8818f9cfc85113279.png",
     "static/media/mainTitle2.png": "/WrestlingStretch/static/media/mainTitle2.f36209a15a7af5471424.png",
@@ -45,11 +45,11 @@
     "static/media/Triceps.png": "/WrestlingStretch/static/media/Triceps.103cfa9f46f34e1a7dbb.png",
     "index.html": "/WrestlingStretch/index.html",
     "main.27858739.css.map": "/WrestlingStretch/static/css/main.27858739.css.map",
-    "main.324cc98f.js.map": "/WrestlingStretch/static/js/main.324cc98f.js.map",
+    "main.3a2cf989.js.map": "/WrestlingStretch/static/js/main.3a2cf989.js.map",
     "787.2b97a104.chunk.js.map": "/WrestlingStretch/static/js/787.2b97a104.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.27858739.css",
-    "static/js/main.324cc98f.js"
+    "static/js/main.3a2cf989.js"
   ]
 }
