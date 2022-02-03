@@ -23,7 +23,7 @@ export const Expert: VFC = memo(() => {
   const navigate = useNavigate();
   const onClickExpert = useCallback(() => navigate("/Expert"), []);
   return (
-    <Box w="100%" h="100vh">
+    <Box w="100%" h="100%">
       <TopBreadCrumb
         childBreadCrumb={
           <BreadcrumbItem isCurrentPage>
