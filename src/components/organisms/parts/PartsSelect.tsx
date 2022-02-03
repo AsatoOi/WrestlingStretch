@@ -20,9 +20,22 @@ export const PartsSelect: VFC = memo(() => {
   const recommendTechnique = currentTechnique.filter((tech) => {
     return tech.recommend === true;
   });
+  const recommendTechniqueTopTwo = recommendTechnique
+    .slice(0, 2)
+    .map((tech) => {
+      return tech;
+    });
+  const otherRecommendedTechnique = recommendTechnique
+    .slice(3, recommendTechnique.length)
+    .map((tech) => {
+      return tech;
+    });
   const otherTechnique = currentTechnique.filter((tech) => {
     return tech.recommend === false;
   });
+  const otherAll = [...otherRecommendedTechnique, ...otherTechnique];
+
+
   return (
     <>
       <H3_1 />
@@ -41,7 +54,7 @@ export const PartsSelect: VFC = memo(() => {
         m="auto"
         alignItems="center"
       >
-        {recommendTechnique.map((tech) => (
+        {recommendTechniqueTopTwo.map((tech) => (
           <InView key={tech.title}>
             <TechButton4
               techTitle={tech.title}
@@ -60,7 +73,7 @@ export const PartsSelect: VFC = memo(() => {
           w={{ base: 64, md: "36rem", lg: "60rem" }}
           m="auto"
         >
-          {otherTechnique.map((tech) => (
+          {otherAll.map((tech) => (
             <InView key={tech.title}>
               <TechButton3
                 techTitle={tech.title}

@@ -7,9 +7,14 @@ import tricepsY from "../../../data/img/bodyBack/TricepsY.png";
 import { partsState } from "../../../store/partsState";
 import { BooleanFalse } from "../../../data/Boolean.js";
 
-export const Triceps: VFC = memo(() => {
+type Props = {
+  scroll: () => void;
+};
+
+export const Triceps: VFC<Props> = memo(({ scroll }) => {
   const [partsBoolean, setPartsBoolean] = useRecoilState(partsState);
   const onClickTricepsTrue = () => {
+    scroll();
     setPartsBoolean([
       false,
       false,

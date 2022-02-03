@@ -7,9 +7,14 @@ import bicepsY from "../../../data/img/bodyFront/BicepsY.png";
 import { partsState } from "../../../store/partsState";
 import { BooleanFalse } from "../../../data/Boolean.js";
 
-export const Biceps: VFC = memo(() => {
+type Props = {
+  scroll: () => void;
+};
+
+export const Biceps: VFC<Props> = memo(({ scroll }) => {
   const [partsBoolean, setPartsBoolean] = useRecoilState(partsState);
   const onClickBicepsTrue = () => {
+    scroll();
     setPartsBoolean([
       false,
       false,

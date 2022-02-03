@@ -8,9 +8,14 @@ import pectoralisY from "../../../data/img/bodyFront/PectoralisY.png";
 import { partsState } from "../../../store/partsState";
 import { BooleanFalse } from "../../../data/Boolean.js";
 
-export const Pectoralis: VFC = memo(() => {
+type Props = {
+  scroll: () => void;
+};
+
+export const Pectoralis: VFC<Props> = memo(({ scroll }) => {
   const [partsBoolean, setPartsBoolean] = useRecoilState(partsState);
   const onClickPectoralisTrue = () => {
+    scroll();
     setPartsBoolean([
       true,
       false,

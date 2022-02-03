@@ -7,9 +7,14 @@ import hamstringY from "../../../data/img/bodyBack/HamstringY.png";
 import { partsState } from "../../../store/partsState";
 import { BooleanFalse } from "../../../data/Boolean.js";
 
-export const Hamstring: VFC = memo(() => {
+type Props = {
+  scroll: () => void;
+};
+
+export const Hamstring: VFC<Props> = memo(({ scroll }) => {
   const [partsBoolean, setPartsBoolean] = useRecoilState(partsState);
   const onClickHamstringTrue = () => {
+    scroll();
     setPartsBoolean([
       false,
       false,

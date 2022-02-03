@@ -7,9 +7,14 @@ import gastrocnemiusY from "../../../data/img/bodyBack/GastrocnemiusY.png";
 import { partsState } from "../../../store/partsState";
 import { BooleanFalse } from "../../../data/Boolean.js";
 
-export const Gastrocnemius: VFC = memo(() => {
+type Props = {
+  scroll: () => void;
+};
+
+export const Gastrocnemius: VFC<Props> = memo(({ scroll }) => {
   const [partsBoolean, setPartsBoolean] = useRecoilState(partsState);
   const onClickGastrocnemiusTrue = () => {
+    scroll();
     setPartsBoolean([
       false,
       false,

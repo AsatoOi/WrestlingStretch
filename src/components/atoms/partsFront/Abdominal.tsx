@@ -7,19 +7,14 @@ import abdominalY from "../../../data/img/bodyFront/AbdominalY.png";
 import { partsState } from "../../../store/partsState";
 import { BooleanFalse } from "../../../data/Boolean.js";
 
-export const Abdominal: VFC = memo(() => {
-  const scrollDown = () => {
-    window.scrollTo({
-      top: 1000,
-      behavior: "smooth",
-    });
-  };
+type Props = {
+  scroll: () => void;
+};
+
+export const Abdominal: VFC<Props> = memo(({ scroll }) => {
   const [partsBoolean, setPartsBoolean] = useRecoilState(partsState);
   const onClickAbdominalTrue = () => {
-    window.scrollTo({
-      top: 1000,
-      behavior: "smooth",
-    });
+    scroll();
     setPartsBoolean([
       false,
       false,

@@ -7,9 +7,14 @@ import deltoidY from "../../../data/img/bodyFront/DeltoidY.png";
 import { partsState } from "../../../store/partsState";
 import { BooleanFalse } from "../../../data/Boolean.js";
 
-export const Deltoid: VFC = memo(() => {
+type Props = {
+  scroll: () => void;
+};
+
+export const Deltoid: VFC<Props> = memo(({ scroll }) => {
   const [partsBoolean, setPartsBoolean] = useRecoilState(partsState);
   const onClickDeltoidTrue = () => {
+    scroll();
     setPartsBoolean([
       false,
       true,

@@ -6,9 +6,14 @@ import hip from "../../../data/img/bodyBack/hip.png";
 import hipY from "../../../data/img/bodyBack/hipY.png";
 import { partsState } from "../../../store/partsState";
 import { BooleanFalse } from "../../../data/Boolean.js";
-export const Hip: VFC = memo(() => {
+type Props = {
+  scroll: () => void;
+};
+
+export const Hip: VFC<Props> = memo(({ scroll }) => {
   const [partsBoolean, setPartsBoolean] = useRecoilState(partsState);
   const onClickHipTrue = () => {
+    scroll();
     setPartsBoolean([
       false,
       false,

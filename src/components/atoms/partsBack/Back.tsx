@@ -7,9 +7,14 @@ import backY from "../../../data/img/bodyBack/backY.png";
 import { partsState } from "../../../store/partsState";
 import { BooleanFalse } from "../../../data/Boolean.js";
 
-export const Back: VFC = memo(() => {
+type Props = {
+  scroll: () => void;
+};
+
+export const Back: VFC<Props> = memo(({ scroll }) => {
   const [partsBoolean, setPartsBoolean] = useRecoilState(partsState);
   const onClickBackTrue = () => {
+    scroll();
     setPartsBoolean([
       false,
       false,

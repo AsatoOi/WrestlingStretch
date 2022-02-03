@@ -1,5 +1,5 @@
-import { memo, VFC } from "react";
-
+/*eslint-disable react-hooks/exhaustive-deps*/
+import { memo, VFC, useCallback, createRef } from "react";
 import { Box, Image } from "@chakra-ui/react";
 import { useRecoilState } from "recoil";
 
@@ -20,6 +20,16 @@ export const AnatomicalModelFront: VFC = memo(() => {
   const [partsBoolean, setPartsBoolean] = useRecoilState(partsState);
   const onClickReset = () => {
     setPartsBoolean(BooleanFalse);
+  };
+  const ref = createRef<HTMLDivElement>();
+  const scrollToBottomOfList = useCallback(() => {
+    ref!.current!.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }, [ref]);
+  const onClickParts = () => {
+    scrollToBottomOfList();
   };
 
   return (
@@ -45,10 +55,10 @@ export const AnatomicalModelFront: VFC = memo(() => {
           h={{ base: "4.5rem", md: "8rem" }}
           left={{ base: "36%", md: "38%" }}
         />
-        <Pectoralis />
-        <Deltoid />
-        <Biceps />
-        <Arms />
+        <Pectoralis scroll={onClickParts} />
+        <Deltoid scroll={onClickParts} />
+        <Biceps scroll={onClickParts} />
+        <Arms scroll={onClickParts} />
         <Image
           src={hands}
           alt="手のイラスト"
@@ -57,8 +67,8 @@ export const AnatomicalModelFront: VFC = memo(() => {
           left={{ base: "12.5%", md: "11.8%" }}
           top="57.5%"
         />
-        <Abdominal />
-        <Quadriceps />
+        <Abdominal scroll={onClickParts} />
+        <Quadriceps scroll={onClickParts} />
         <Image
           src={legs}
           alt="足のイラスト"
@@ -68,6 +78,7 @@ export const AnatomicalModelFront: VFC = memo(() => {
           top="75.5%"
         />
       </Box>
+      <div ref={ref}></div>
     </InView>
   );
 });

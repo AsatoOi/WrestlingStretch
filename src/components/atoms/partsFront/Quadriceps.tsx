@@ -7,9 +7,13 @@ import quadricepsY from "../../../data//img/bodyFront/QuadricepsY.png";
 import { partsState } from "../../../store/partsState";
 import { BooleanFalse } from "../../../data/Boolean.js";
 
-export const Quadriceps: VFC = memo(() => {
+type Props = {
+  scroll: () => void;
+};
+export const Quadriceps: VFC<Props> = memo(({ scroll }) => {
   const [partsBoolean, setPartsBoolean] = useRecoilState(partsState);
   const onClickQuadricepsTrue = () => {
+    scroll();
     setPartsBoolean([
       false,
       false,

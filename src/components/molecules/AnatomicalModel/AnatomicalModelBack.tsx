@@ -1,4 +1,4 @@
-import { memo, VFC } from "react";
+import { memo, VFC, createRef, useCallback } from "react";
 import { Box, Image } from "@chakra-ui/react";
 import { useRecoilState } from "recoil";
 
@@ -18,6 +18,16 @@ export const AnatomicalModelBack: VFC = memo(() => {
   const [partsBoolean, setPartsBoolean] = useRecoilState(partsState);
   const onClickReset = () => {
     setPartsBoolean(BooleanFalse);
+  };
+  const ref = createRef<HTMLDivElement>();
+  const scrollToBottomOfList = useCallback(() => {
+    ref!.current!.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }, [ref]);
+  const onClickParts = () => {
+    scrollToBottomOfList();
   };
   return (
     <InView>
@@ -42,14 +52,15 @@ export const AnatomicalModelBack: VFC = memo(() => {
           h={{ base: "4.5rem", md: "8rem" }}
           left={{ base: "36%", md: "38%" }}
         />
-        <Back />
-        <DeltoidBack />
-        <Triceps />
-        <ArmBack />
-        <Hip />
-        <Hamstring />
-        <Gastrocnemius />
+        <Back scroll={onClickParts} />
+        <DeltoidBack scroll={onClickParts} />
+        <Triceps scroll={onClickParts} />
+        <ArmBack scroll={onClickParts} />
+        <Hip scroll={onClickParts} />
+        <Hamstring scroll={onClickParts} />
+        <Gastrocnemius scroll={onClickParts} />
       </Box>
+      <div ref={ref}></div>
     </InView>
   );
 });
