@@ -22,6 +22,7 @@ export const BackToTopButton: VFC = memo(() => {
       pl="35px"
       borderTop="solid"
       borderTopWidth="thin"
+      _hover={{ cursor: "pointer" }}
       _before={{
         content: `""`,
         display: "block",

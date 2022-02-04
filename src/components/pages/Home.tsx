@@ -17,6 +17,7 @@ import CopperCrown from "../../data/img/crown/copperCrown.png";
 import technique from "../../data/json/technique.json";
 import heading1 from "../../data/img/title/heading1.png";
 import heading2 from "../../data/img/title/heading2.png";
+import illustration1 from "../../data/img/illustration/illustration1.png";
 
 export const Home: VFC = memo(() => {
   const newData = technique.sort((a, b) => (a.likes < b.likes ? 1 : -1));
@@ -121,7 +122,7 @@ export const Home: VFC = memo(() => {
               color="#eee"
               fontWeight="bold"
               lineHeight={{ base: "2.5rem", md: "3.5rem" }}
-              zIndex={1}
+              zIndex={3}
             >
               #プロストとは、
               <br /> 「プロレス技でストレッチしよう！」の略称です。
@@ -134,6 +135,15 @@ export const Home: VFC = memo(() => {
               <br />
               さぁ、カップルで#プロストを始めましょう。
             </Text>
+            {/* <Image
+              zIndex={-1}
+              src={illustration1}
+              alt="雲に乗った少年"
+              w={{ base: "50%", md: "50%" }}
+              position="absolute"
+              right="10%"
+              bottom="10%"
+            /> */}
           </Box>
         </InView>
         <InView>
