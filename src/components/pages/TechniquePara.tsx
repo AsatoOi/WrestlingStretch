@@ -113,7 +113,7 @@ export const TechniquePara: VFC = memo(() => {
         color="white"
         textAlign="center"
         size="lg"
-        mt={12}
+        mt={5}
         position="relative"
         left="-1"
       >
