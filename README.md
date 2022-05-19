@@ -2,10 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## サイトの URL
-
-https://asatooi.github.io/WrestlingStretch/
-
 ## Position の番号について
 
 0:Pectoralis(胸筋)
